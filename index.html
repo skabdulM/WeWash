@@ -44,7 +44,6 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">about us</a></li>
             <li><a href="services-pricing.html">services & pricing</a></li>
             <li><a href="our-process.html">our process</a></li>
@@ -64,11 +63,29 @@
     <section id="hero" class="hero d-flex align-items-center m-0 p-0">
       <div class="container d-flex m-0 p-0">
         <div class="text">
-          <div class="hero-text">
+          <div class="hero-text pt-5">
             dry cleaning excellence <br />begins at
             <span class="strikethrough">₹199</span> ₹94
           </div>
-          <div class="card">
+
+          <div class="review-container pt-5 pb-5">
+            <div class="review-images">
+              <img src="./assets/img/review1.png" alt="User 1" />
+              <img src="./assets/img/review1.png" alt="User 2" />
+              <img src="./assets/img/review1.png" alt="User 3" />
+              <img src="./assets/img/review1.png" alt="User 4" />
+            </div>
+
+            <div class="review-info">
+              <div class="stars">
+                ⭐⭐⭐⭐⭐
+                <span class="rating">5.0</span>
+              </div>
+              <p>from 200+ reviews</p>
+            </div>
+          </div>
+
+          <div class="card mb-4 d-flex justify-content-center">
             <div class="card-body d-flex justify-content-between">
               <div class="input-line pe-2">
                 <input
@@ -106,7 +123,36 @@
               >
             </div>
           </div>
+
+          <div class="d-flex justify-content-evenly w-100 mt-5 services-list">
+            <div>
+              <img
+                src="./assets/img/clock.svg"
+                class="pe-2"
+                alt="clock Icon"
+              />services 9 am to 9 pm
+            </div>
+            <div>
+              <img
+                src="./assets/img/delivery.svg"
+                class="pe-2"
+                alt="delivery Icon"
+              />free pickup & delivery
+            </div>
+            <div>
+              <img
+                src="./assets/img/clock-fast.svg"
+                class="pe-2"
+                alt="Clock Icon"
+              />express 2 hr service*
+            </div>
+          </div>
+          <div class="about-us mt-5 pt-5">
+            <div>about us</div>
+            <div class="about-us-title">why us? check our work</div>
+          </div>
         </div>
+
         <img
           src="assets/img/bubble-left.svg"
           alt="Bubble"
@@ -118,16 +164,33 @@
           class="hero-bubble-right"
         />
       </div>
-      FASDF
     </section>
     <!-- End Hero -->
-    <section>
-      <div class="container d-flex m-0 p-0">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        quas autem accusamus dolorem dignissimos pariatur blanditiis illum
-        necessitatibus deleniti distinctio quo eligendi nulla at eius, ipsa quia
-        a tempora aperiam asperiores recusandae in, maiores qui. Sint unde
-        voluptas perferendis.
+    <section class="about-us-section ms-5">
+      <div class="comparison-section">
+        <button class="nav-button left-button">&lt;</button>
+
+        <div class="image-container">
+          <div class="image-card before-card">
+            <img
+              src="assets/img/review3.png"
+              alt="Before Image"
+              class="comparison-image"
+            />
+            <p class="image-label">before</p>
+          </div>
+
+          <div class="image-card after-card">
+            <img
+              src="assets/img/review3.png"
+              alt="After Image"
+              class="comparison-image"
+            />
+            <p class="image-label">after</p>
+          </div>
+        </div>
+
+        <button class="nav-button right-button">&gt;</button>
       </div>
     </section>
     <script

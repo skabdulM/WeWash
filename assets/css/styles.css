@@ -175,7 +175,7 @@ section {
     color: white;
     clip-path: ellipse(85% 100% at top);
     min-width: 100vw;
-    height: 120vh;
+    height: 150vh;
     /* text-align: center; */
     .strikethrough {
       position: relative;
@@ -195,6 +195,45 @@ section {
       -o-transform: rotate(-20deg);
       transform: rotate(-20deg);
     }
+    .review-container {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: white;
+      max-width: 320px;
+    }
+
+    .review-images {
+      display: flex;
+    }
+
+    .review-images img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-right: -10px;
+    }
+
+    .review-info {
+      margin-left: 20px;
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+
+    .stars {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .rating {
+      margin-left: 5px;
+      font-weight: bold;
+    }
 
     .card {
       height: 15%;
@@ -203,7 +242,7 @@ section {
       border-radius: 2rem;
       margin-top: 4rem;
       .input-line {
-        border-right: 2px solid #00449d;
+        border-right: 2px solid var(--color-primary);
         width: 30%;
       }
       .input-card-custom {
@@ -244,7 +283,6 @@ section {
 
   .text {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     font-weight: bold;
     font-family: var(--font-primary);
@@ -254,11 +292,103 @@ section {
     /* margin-top: 6rem; */
     align-items: center;
     height: 80vh;
-    font-size: 8rem;
+
     z-index: 1;
-    text-align: center;
   }
   .hero-text {
     width: 80%;
+    font-size: 8rem;
+    text-align: center;
   }
+  .services-list {
+    font-size: 2rem;
+    font-family: "Nunito";
+    align-items: center;
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .about-us {
+    font-size: 2.5rem;
+    text-align: center;
+    .about-us-title {
+      font-size: 7rem;
+    }
+  }
+}
+/* Background styling */
+.about-us-section {
+  height: 100vh;
+  background: linear-gradient(to bottom, 30%, #fff 30%);
+}
+
+/* Main section */
+.comparison-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Image card */
+.image-card {
+  background: white;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  text-align: center;
+  width: 280px; /* Increased size */
+  transform: rotate(-6deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.after-card {
+  transform: rotate(6deg);
+}
+
+/* Images */
+.comparison-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Image label */
+.image-label {
+  font-family: "Caveat", cursive;
+  font-size: 26px;
+  color: #0a387d;
+  margin-top: 10px;
+}
+
+/* Navigation buttons */
+.nav-button {
+  background-color: #03a0fc;
+  border: none;
+  color: white;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
+
+.left-button {
+  transform: translateX(-15px);
+}
+
+.right-button {
+  transform: translateX(15px);
 }
