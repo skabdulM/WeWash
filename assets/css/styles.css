@@ -319,7 +319,7 @@ section {
 }
 /* Background styling */
 .about-us-section {
-  height: 100vh;
+  /* height: 100vh; */
   background: linear-gradient(to bottom, 30%, #fff 30%);
 }
 
@@ -328,6 +328,7 @@ section {
   display: flex;
   align-items: center;
   gap: 40px;
+  justify-content: space-evenly;
 }
 
 /* Image container */
@@ -344,12 +345,12 @@ section {
   border-radius: 12px;
   text-align: center;
   width: 280px; /* Increased size */
-  transform: rotate(-6deg);
+  transform: rotate(-10deg);
   transition: transform 0.3s ease-in-out;
 }
 
 .after-card {
-  transform: rotate(6deg);
+  transform: rotate(10deg);
 }
 
 /* Images */
@@ -391,4 +392,91 @@ section {
 
 .right-button {
   transform: translateX(15px);
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 8rem;
+  color: var(--color-secondary);
+}
+
+.stat-item p {
+  font-family: "Nunito";
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin: 5px 0;
+}
+
+/* Title */
+.services-title {
+  font-size: 6.5rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin: 3rem 0;
+
+  text-align: center;
+}
+
+/* Services Section */
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.service-card {
+  width: 20%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.service-label {
+  background: linear-gradient(
+      0deg,
+      rgba(217, 217, 217, 0.171),
+      rgba(217, 217, 217, 0.171)
+    ),
+    linear-gradient(0deg, rgba(3, 160, 252, 0.45), rgba(3, 160, 252, 0.45));
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: capitalize;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0;
+  box-shadow: -9.44px 9.44px 9.44px 0px rgba(174, 174, 174, 0.542) inset;
+
+  box-shadow: -4.72px 4.72px 4.72px 0px rgba(255, 255, 255, 0.542) inset;
+
+  box-shadow: 9.44px -9.44px 9.44px 0px rgba(255, 255, 255, 0.542) inset;
+
+  box-shadow: 4.72px -4.72px 4.72px 0px rgba(174, 174, 174, 0.542) inset;
+
+  backdrop-filter: blur(31.152000427246094px);
+}
+.service-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
