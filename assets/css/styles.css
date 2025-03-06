@@ -1,6 +1,6 @@
 @font-face {
   font-family: "brain_wants";
-  src: url("/assets/fonts/brain_wants.otf") format("opentype");
+  src: url("../fonts/brain_wants.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -177,21 +177,58 @@ section {
     min-width: 100vw;
     height: 120vh;
     /* text-align: center; */
+    .strikethrough {
+      position: relative;
+    }
+    .strikethrough:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      right: 0;
+      border-top: 10px solid;
+      border-color: var(--color-secondary);
+
+      -webkit-transform: rotate(-20deg);
+      -moz-transform: rotate(-20deg);
+      -ms-transform: rotate(-20deg);
+      -o-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+    }
+
     .card {
       height: 15%;
       width: 60%;
       font-size: small;
+      border-radius: 2rem;
       margin-top: 4rem;
       .input-line {
         border-right: 2px solid #00449d;
+        width: 30%;
       }
       .input-card-custom {
         height: 100%;
         font-size: xx-large;
+        font-family: "Nunito";
+        color: var(--color-secondary);
+        font-weight: 400;
+      }
+      .input-card-custom::placeholder {
+        color: var(--color-secondary);
       }
       .select-card-custom {
         font-size: xx-large;
+        font-family: "Nunito";
+        color: #00449d;
+      }
+      .select-card {
+        display: flex;
         width: 40%;
+        justify-content: space-between;
+        .location-icon {
+          width: 3rem;
+          height: 100%;
+        }
       }
       .button-card-custom {
         display: flex;
