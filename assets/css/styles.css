@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "brain_wants";
+  src: url("/assets/fonts/brain_wants.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Fonts */
+  /* --font-default: "Nunito", sans-serif; */
+  --font-default: "brain_wants", sans-serif;
+  --font-primary: "brain_wants", sans-serif;
+
+  /* Colors */
+  --color-default: #ffffff;
+  --color-primary: #03a0fc;
+  --color-secondary: #00449d;
+
+  /* Smooth scroll behavior */
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: var(--font-default);
+  color: var(--color-default);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-default);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Sections & Section Header
+--------------------------------------------------------------*/
+section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f5f6f7;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  color: #2e3135;
+}
+
+.section-header h2:before,
+.section-header h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--color-primary);
+  display: inline-block;
+}
+
+.section-header h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.section-header h2:after {
+  margin: 0 0 10px 15px;
+}
+
+.section-header p {
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: 1199px) {
+  .section-header p {
+    max-width: 60%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  z-index: 997;
+  /* position: absolute; */
+  padding: 30px 0;
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  background-color: #03a0fc;
+}
+
+.header .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-default);
+  margin-bottom: 0;
+  font-family: var(--font-primary);
+}
+
+.header .logo h1 span {
+  color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+# Desktop Navigation
+--------------------------------------------------------------*/
+@media (min-width: 1280px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  .navbar > ul > li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
+
+  .navbar .schedule-pickup {
+    background-color: var(--color-default);
+    color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 18px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.hero {
+  .hero-bubble-left {
+    position: absolute;
+    top: 60vh;
+    width: 20%;
+    left: 0;
+  }
+  .hero-bubble-right {
+    position: absolute;
+    right: 0;
+    width: 35%;
+  }
+  .container {
+    position: relative;
+    background-color: var(--color-primary);
+    color: white;
+    clip-path: ellipse(85% 100% at top);
+    min-width: 100vw;
+    height: 120vh;
+    /* text-align: center; */
+    .card {
+      height: 15%;
+      width: 60%;
+      font-size: small;
+      margin-top: 4rem;
+      .input-line {
+        border-right: 2px solid #00449d;
+      }
+      .input-card-custom {
+        height: 100%;
+        font-size: xx-large;
+      }
+      .select-card-custom {
+        font-size: xx-large;
+        width: 40%;
+      }
+      .button-card-custom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-secondary);
+        width: 20%;
+        margin-left: 2rem;
+        font-size: x-large;
+      }
+    }
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    /* padding: 10px; */
+    width: 100%;
+    font-weight: 400;
+    /* margin-top: 6rem; */
+    align-items: center;
+    height: 80vh;
+    font-size: 8rem;
+    z-index: 1;
+    text-align: center;
+  }
+  .hero-text {
+    width: 80%;
+  }
+}
