@@ -35,59 +35,8 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary);
+  /* color: var(--color-primary); */
   text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# Sections & Section Header
---------------------------------------------------------------*/
-section {
-  padding: 80px 0;
-  overflow: hidden;
-}
-
-.section-bg {
-  background-color: #f5f6f7;
-}
-
-.section-header {
-  text-align: center;
-  padding-bottom: 70px;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  font-weight: 700;
-  position: relative;
-  color: #2e3135;
-}
-
-.section-header h2:before,
-.section-header h2:after {
-  content: "";
-  width: 50px;
-  height: 2px;
-  background: var(--color-primary);
-  display: inline-block;
-}
-
-.section-header h2:before {
-  margin: 0 15px 10px 0;
-}
-
-.section-header h2:after {
-  margin: 0 0 10px 15px;
-}
-
-.section-header p {
-  margin: 0 auto 0 auto;
-}
-
-@media (min-width: 1199px) {
-  .section-header p {
-    max-width: 60%;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -96,16 +45,22 @@ section {
 .header {
   z-index: 997;
   /* position: absolute; */
-  padding: 30px 0;
+  padding: 2rem 0;
   /* top: 0;
   left: 0;
   right: 0; */
   background-color: #03a0fc;
+  a {
+    color: var(--color-default) !important;
+    font-weight: 400;
+  }
 }
-
+.navbar {
+  color: var(--color-default) !important;
+  background-color: #03a0fc !important;
+}
 .header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 2rem;
 }
 
 .header .logo h1 {
@@ -124,35 +79,36 @@ section {
 # Desktop Navigation
 --------------------------------------------------------------*/
 @media (min-width: 1280px) {
+  .header {
+    a {
+      margin-right: 2rem;
+      font-size: larger;
+    }
+  }
+  .header .logo img {
+    max-height: 3rem;
+  }
   .navbar {
-    padding: 0;
+    margin: 0 8rem 0 8rem;
   }
-
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    align-items: center;
+  .header .logo img {
+    max-height: 3rem;
   }
-
-  .navbar li {
-    position: relative;
-  }
-
-  .navbar > ul > li {
-    white-space: nowrap;
-    padding: 10px 0 10px 28px;
-  }
-
   .navbar .schedule-pickup {
     background-color: var(--color-default);
-    color: var(--color-secondary);
+    color: var(--color-secondary) !important;
     padding: 20px;
     border-radius: 18px;
   }
 }
-
+/*--------------------------------------------------------------
+# MObile Navigation
+--------------------------------------------------------------*/
+@media (max-width: 767.98px) {
+  .header {
+    padding: 1rem 0;
+  }
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -317,81 +273,82 @@ section {
     }
   }
 }
+
 /* Background styling */
 .about-us-section {
   /* height: 100vh; */
   background: linear-gradient(to bottom, 30%, #fff 30%);
-}
 
-/* Main section */
-.comparison-section {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: space-evenly;
-}
+  /* Main section */
+  .comparison-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-evenly;
+  }
 
-/* Image container */
-.image-container {
-  display: flex;
-  gap: 20px;
-}
+  /* Image container */
+  .image-container {
+    display: flex;
+    gap: 20px;
+  }
 
-/* Image card */
-.image-card {
-  background: white;
-  padding: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-  text-align: center;
-  width: 280px; /* Increased size */
-  transform: rotate(-10deg);
-  transition: transform 0.3s ease-in-out;
-}
+  /* Image card */
+  .image-card {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    width: 280px; /* Increased size */
+    transform: rotate(-10deg);
+    transition: transform 0.3s ease-in-out;
+  }
 
-.after-card {
-  transform: rotate(10deg);
-}
+  .after-card {
+    transform: rotate(10deg);
+  }
 
-/* Images */
-.comparison-image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
+  /* Images */
+  .comparison-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
 
-/* Image label */
-.image-label {
-  font-family: "Caveat", cursive;
-  font-size: 26px;
-  color: #0a387d;
-  margin-top: 10px;
-}
+  /* Image label */
+  .image-label {
+    font-family: "Caveat", cursive;
+    font-size: 26px;
+    color: #0a387d;
+    margin-top: 10px;
+  }
 
-/* Navigation buttons */
-.nav-button {
-  background-color: #03a0fc;
-  border: none;
-  color: white;
-  font-size: 30px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease-in-out;
-}
+  /* Navigation buttons */
+  .nav-button {
+    background-color: #03a0fc;
+    border: none;
+    color: white;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
 
-.nav-button:hover {
-  transform: scale(1.1);
-}
+  .nav-button:hover {
+    transform: scale(1.1);
+  }
 
-.left-button {
-  transform: translateX(-15px);
-}
+  .left-button {
+    transform: translateX(-15px);
+  }
 
-.right-button {
-  transform: translateX(15px);
+  .right-button {
+    transform: translateX(15px);
+  }
 }
 
 /* Stats Section */
@@ -479,4 +436,496 @@ section {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+.more-services-button {
+  color: var(--color-default);
+  background: var(--color-secondary);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+}
+
+/* Container & Layout */
+.section4 {
+  padding: 2rem;
+  margin-top: 6rem;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Main Title */
+  .section-title {
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary); /* Adjust background if needed */
+  }
+
+  /* Services Content Layout */
+  .services-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  /* Services List */
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 3rem 0;
+    font-family: "Nunito";
+    flex: 1 1 300px; /* Allows it to shrink/grow */
+    font-size: 1.5rem;
+    color: var(--color-primary); /* Adjust background if needed */
+  }
+
+  .services-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Image Styling */
+  .services-image {
+    flex: 1 1 300px; /* Allows it to shrink/grow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .express-service {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* Make the express image responsive */
+  .express-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Express button styling */
+  .express-button {
+    background-color: var(--color-secondary); /* Adjust to your brand color */
+    color: var(--color-default);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Spacing above the button */
+  }
+}
+.section5 {
+  .promo-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .promo-banner {
+    position: relative;
+    width: 80%;
+
+    text-align: center;
+  }
+
+  .promo-image {
+    width: 100%;
+    height: 40vh;
+    display: block;
+    border-radius: 3rem;
+    object-fit: cover;
+  }
+
+  .promo-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    text-transform: lowercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .promo-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Schedule pickup button */
+  .promo-button {
+    background-color: var(--color-secondary); /* Adjust to your brand color */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-transform: lowercase;
+    transition: background-color 0.3s ease;
+  }
+}
+.section6 {
+  margin-top: 8rem;
+  text-align: center;
+  .franchise-section {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .franchise-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .franchise-title {
+    font-size: 4rem;
+    color: var(--color-secondary);
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+  }
+
+  .franchise-text {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+  }
+
+  .franchise-button {
+    background-color: var(--color-secondary);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+}
+
+/* Footer Base Styles */
+.footer {
+  background: linear-gradient(
+    to right,
+    #0b2452,
+    #0055ff
+  ); /* Example gradient */
+  color: #fff;
+  padding: 2rem 1rem;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Three columns:
+     1) Brand/Menu
+     2) Locations
+     3) Social Icons
+  */
+    grid-template-columns: 1fr 3fr auto;
+    gap: 2rem;
+  }
+
+  /* ------------------------ */
+  /* Left Column: Brand/Menu */
+  /* ------------------------ */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-brand {
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    margin: 0 0 1rem 0;
+  }
+
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-menu li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+  }
+
+  .footer-menu a:hover {
+    color: #d9d9d9;
+  }
+
+  /* ------------------------ */
+  /* Middle Columns: Locations */
+  /* ------------------------ */
+  .footer-locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* On smaller screens, each location will stack if space is limited */
+    gap: 1rem;
+  }
+
+  .location h3 {
+    margin: 0 0 0.5rem 0;
+    text-transform: lowercase;
+  }
+
+  .location p {
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+  }
+
+  /* ------------------------ */
+  /* Right Column: Social Icons */
+  /* ------------------------ */
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .footer-social a {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+
+  .footer-social a:hover {
+    color: #d9d9d9;
+  }
+
+  /* ------------------------ */
+  /* Responsive Tweaks */
+  /* ------------------------ */
+  /* If you want the columns to stack on smaller screens, you can add a media query: */
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .footer-social {
+      align-items: center;
+    }
+  }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .hero {
+    .container {
+      clip-path: ellipse(150% 100% at top);
+      .strikethrough:before {
+        border-top: 4px solid;
+        border-color: var(--color-secondary);
+      }
+
+      .review-images {
+        display: flex;
+      }
+
+      .review-images img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .review-info {
+        p {
+          font-size: 0.6rem;
+        }
+      }
+
+      .stars {
+        font-size: 0.6rem;
+      }
+
+      .card {
+        display: none !important;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      font-family: var(--font-primary);
+      /* padding: 10px; */
+      width: 100%;
+      font-weight: 400;
+      /* margin-top: 6rem; */
+      align-items: center;
+      height: 80vh;
+
+      z-index: 1;
+    }
+    .hero-text {
+      width: 100%;
+      font-size: 3rem;
+      text-align: center;
+    }
+    .services-list {
+      font-size: large;
+      font-family: "Nunito";
+      align-items: center;
+      flex-direction: column;
+      div {
+        padding-top: 2rem;
+
+        display: flex;
+        align-items: center;
+        .services-icon {
+          width: large;
+          height: large;
+        }
+      }
+    }
+    .about-us {
+      font-size: 2rem;
+      text-align: center;
+      .about-us-title {
+        padding-top: 1.5rem;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  /* Background styling */
+  .about-us-section {
+    height: 100vh;
+    background: linear-gradient(to bottom, 30%, #fff 30%);
+    margin: 1rem 1rem 0 1rem !important;
+    /* Main section */
+    .comparison-section {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    /* Image container */
+    .image-container {
+      flex-direction: column;
+    }
+
+    /* Image card */
+    .image-card {
+      width: 90%; /* Increased size */
+      transform: rotate(0deg);
+    }
+
+    .after-card {
+      transform: rotate(0deg);
+    }
+  }
+
+  /* Stats Section */
+  .stats-section {
+    gap: 2rem;
+    flex-direction: column;
+
+    .stat-item h2 {
+      font-size: 4rem;
+    }
+
+    .stat-item p {
+      font-family: "Nunito";
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin: 5px 0;
+    }
+  }
+  /* Title */
+  .services-title {
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--color-secondary);
+    margin: 3rem 1rem;
+    text-align: center;
+  }
+
+  /* Services Section */
+  .services-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    .service-card {
+      width: 80%;
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .service-label {
+      background: linear-gradient(
+          0deg,
+          rgba(217, 217, 217, 0.171),
+          rgba(217, 217, 217, 0.171)
+        ),
+        linear-gradient(0deg, rgba(3, 160, 252, 0.45), rgba(3, 160, 252, 0.45));
+
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px;
+      text-transform: capitalize;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin: 0;
+      box-shadow: -9.44px 9.44px 9.44px 0px rgba(174, 174, 174, 0.542) inset;
+
+      box-shadow: -4.72px 4.72px 4.72px 0px rgba(255, 255, 255, 0.542) inset;
+
+      box-shadow: 9.44px -9.44px 9.44px 0px rgba(255, 255, 255, 0.542) inset;
+
+      box-shadow: 4.72px -4.72px 4.72px 0px rgba(174, 174, 174, 0.542) inset;
+
+      backdrop-filter: blur(31.152000427246094px);
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease-in-out;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Your CSS rules for medium devices */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Your CSS rules for large devices */
 }
