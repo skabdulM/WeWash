@@ -1,39 +1,32 @@
-
-// Array of image objects with before and after properties
+// Configuration
 const imagePairs = [
     { before: "./assets/img/before1.png", after: "./assets/img/after1.png" },
-    { before: "./assets/img/before2.png", after: "./assets/img/after2.png" },
-    // Add more objects as needed
+    { before: "./assets/img/before2.png", after: "./assets/img/after2.png" }
 ];
 
-// Track the current image index
+// State management
 let currentIndex = 0;
 
-// Function to update the images in the DOM
-function updateImages() {
-    const beforeImage = document.querySelector(
-        ".before-card .comparison-image"
-    );
-    const afterImage = document.querySelector(
-        ".after-card .comparison-image"
-    );
+// DOM Elements
+const beforeImage = document.querySelector(".before-card .comparison-image");
+const afterImage = document.querySelector(".after-card .comparison-image");
+const leftButton = document.querySelector(".left-button");
+const rightButton = document.querySelector(".right-button");
 
+// Functions
+function updateImages() {
     beforeImage.src = imagePairs[currentIndex].before;
     afterImage.src = imagePairs[currentIndex].after;
 }
 
-// Event listener for left button
-document.querySelector(".left-button").addEventListener("click", () => {
-    console.log("Left button clicked");
-
-    currentIndex = (currentIndex - 1 + imagePairs.length) % imagePairs.length;
+function navigateImages(direction) {
+    currentIndex = (currentIndex + direction + imagePairs.length) % imagePairs.length;
     updateImages();
-});
+}
 
-// Event listener for right button
-document.querySelector(".right-button").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % imagePairs.length;
-    console.log(currentIndex);
+// Event Listeners
+leftButton.addEventListener("click", () => navigateImages(-1));
+rightButton.addEventListener("click", () => navigateImages(1));
 
-    updateImages();
-});
+// Initialize images
+updateImages();
