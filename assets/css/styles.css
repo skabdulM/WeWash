@@ -1043,6 +1043,8 @@ Franchise page
 
   .hero-content h1 {
     font-size: 6rem;
+    text-transform: lowercase;
+    font-weight: 400;
     margin-bottom: 1rem;
   }
 
@@ -1050,6 +1052,8 @@ Franchise page
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
+    text-transform: lowercase;
+    font-weight: 600;
   }
 
   .franchise-section {
@@ -1120,10 +1124,9 @@ Franchise page
   .section-title {
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase; /* matches your brand style */
+    text-transform: lowercase;
   }
 
-  /* Lists */
   .section-list {
     list-style: decimal;
     margin-bottom: 2rem;
@@ -1142,7 +1145,6 @@ Franchise page
   /* Sample Pictures Grid */
   .sample-pictures {
     display: grid;
-    /* auto-fit will create as many columns of at least 250px wide as fit in the container */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
@@ -1150,8 +1152,8 @@ Franchise page
   .sample-pictures img {
     width: 100%;
     height: auto;
-    border-radius: 4px; /* optional styling */
-    object-fit: cover; /* ensures image fills its container nicely */
+    border-radius: 4px;
+    object-fit: cover;
   }
 }
 
@@ -1194,5 +1196,239 @@ Franchise page
     }
   }
 }
-@media (min-width: 768px) and (max-width: 1212px) {
+
+/*--------------------------------------------------------------
+Our Process page
+--------------------------------------------------------------*/
+.process-page {
+  .hero-section {
+    background: radial-gradient(
+      111.25% 77.21% at 50.02% 27.24%,
+      var(--color-primary) 0%,
+      var(--color-primary) 51%,
+      var(--color-secondary) 100%
+    );
+
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 6rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 0;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+  .process-section1 {
+    padding: 3rem 1rem;
+    color: var(--color-primary);
+  }
+  .process-heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .features-section {
+    color: var(--color-secondary); /* Adjust to your brand color */
+    padding: 0 1rem 3rem 1rem;
+  }
+
+  .features-container {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+
+  .feature-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .feature-text h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    text-transform: lowercase;
+  }
+
+  .feature-text p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .feature-icon img {
+    width: 6rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .process-page {
+    .hero-section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    .feature-item {
+      grid-template-columns: 1fr;
+      text-align: center; /* optional: center text & icon */
+    }
+
+    .feature-icon {
+      order: -1;
+      margin-bottom: 1rem; /* Spacing between the icon and text */
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+Schedule pickup page
+--------------------------------------------------------------*/
+.schedule-page {
+  .hero-section {
+    background: radial-gradient(
+      111.25% 77.21% at 50.02% 27.24%,
+      var(--color-primary) 0%,
+      var(--color-primary) 51%,
+      var(--color-secondary) 100%
+    );
+
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 6rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 0;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+  .hero-content-highlight {
+    color: var(--color-secondary);
+  }
+
+  .pickup-form-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+  }
+
+  /* Container */
+  .pickup-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Heading */
+  .pickup-form-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: lowercase;
+  }
+
+  .pickup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .pickup-form input,
+  .pickup-form select {
+    width: 100%;
+    font-weight: 400;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 17px 37px 0px rgba(0, 68, 157, 0.1);
+
+    color: var(--color-secondary);
+    outline: none;
+  }
+
+  .pickup-form input::placeholder,
+  .pickup-form select option {
+    color: var(--color-secondary);
+    text-transform: lowercase;
+  }
+
+  /* Button */
+  .pickup-form button {
+    background-color: var(--color-secondary); /* Adjust to your brand color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: lowercase;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    transition: background-color 0.3s ease;
+  }
+
+  .pickup-form button:hover {
+    background-color: #0033a1; /* Slightly darker on hover */
+  }
+
+  /* Responsive Tweaks (Optional) */
+  @media (max-width: 480px) {
+    .pickup-form-title {
+      font-size: 1.4rem;
+    }
+
+    .pickup-form {
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .schedule-page {
+    .hero-section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+  }
 }
