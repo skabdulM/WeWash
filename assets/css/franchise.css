@@ -1,0 +1,105 @@
+/* Base Styles */
+@font-face {
+  font-family: "brain_wants";
+  src: url("../fonts/brain_wants.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bradley Hand ITC";
+  src: url("../fonts/BRADHITC.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Theme Variables */
+  --font-default: "brain_wants", sans-serif;
+  --font-primary: "brain_wants", sans-serif;
+  --font-secondary: "Nunito", sans-serif;
+  --font-tertiary: "Bradley Hand ITC", sans-serif;
+
+  --color-default: #ffffff;
+  --color-primary: #03a0fc;
+  --color-secondary: #00449d;
+
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+  # General
+  --------------------------------------------------------------*/
+body {
+  font-family: var(--font-default);
+  color: var(--color-default);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-default);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+.header {
+  z-index: 997;
+  padding: 2rem 0;
+  background-color: #03a0fc;
+  a {
+    color: var(--color-default) !important;
+    font-weight: 400;
+  }
+}
+.navbar {
+  color: var(--color-default) !important;
+  background-color: #03a0fc !important;
+}
+.header .logo img {
+  max-height: 2rem;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-default);
+  margin-bottom: 0;
+  font-family: var(--font-primary);
+}
+
+.header .logo h1 span {
+  color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------
+  # Desktop Navigation
+  --------------------------------------------------------------*/
+@media (min-width: 1280px) {
+  .header {
+    a {
+      margin-right: 2rem;
+      font-size: larger;
+    }
+  }
+  .header .logo img {
+    max-height: 3rem;
+  }
+  .navbar {
+    margin: 0 8rem 0 8rem;
+  }
+  .header .logo img {
+    max-height: 3rem;
+  }
+  .navbar .schedule-pickup {
+    background-color: var(--color-default);
+    color: var(--color-secondary) !important;
+    padding: 20px;
+    border-radius: 18px;
+  }
+}
