@@ -1513,3 +1513,173 @@ Services page
     }
   }
 }
+
+/*--------------------------------------------------------------
+Services1 page
+--------------------------------------------------------------*/
+.services1-page {
+  .service-section-container {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.771505) 70.24%,
+      #ffffff 90.73%,
+      #ffffff 97.87%
+    );
+  }
+  .service-section-container img {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    z-index: -1;
+  }
+  .service-section-hero {
+    position: absolute;
+    bottom: 8px;
+    left: 10%;
+    text-align: left;
+  }
+  .service-section-hero-title {
+    font-size: 6rem;
+    color: var(--color-secondary);
+    text-transform: lowercase;
+  }
+  .service-section-hero p {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    max-width: 80%;
+    text-align: justify;
+  }
+  /* Main Section Wrapper */
+  .service-listing {
+    color: var(--color-secondary);
+    padding: 2rem;
+  }
+
+  .service-listing-wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .tag {
+    border: 3px solid rgba(3, 160, 252, 1);
+    padding: 0.5rem 1rem;
+    border-radius: 4rem;
+    text-transform: lowercase;
+    cursor: pointer;
+  }
+
+  .service-lists {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .service-list-left {
+    flex: 1;
+    max-height: 400px; /* Adjust to your desired scrollable height */
+    overflow-y: auto; /* makes this column scrollable if content exceeds 400px */
+    padding-right: 1rem; /* spacing near scrollbar */
+    border-right: 1px solid #ddd; /* optional divider */
+  }
+
+  /* Category Section */
+  .service-category {
+    margin-bottom: 2rem;
+  }
+
+  .category-title {
+    text-transform: lowercase;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  /* Category Items */
+  .category-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-style: var(--font-secondary);
+    border-top: 1px solid #ddd; /* top boundary line */
+  }
+
+  .category-items li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    color: var(--color-primary);
+    border-bottom: 1px solid #ddd; /* line between items */
+  }
+
+  .item-name {
+    text-transform: lowercase;
+  }
+
+  .item-price {
+    color: var(--color-primary);
+  }
+
+  .other-services-title {
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .other-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .other-services-list li {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    text-transform: lowercase;
+  }
+
+  .service-list-left::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .service-list-left::-webkit-scrollbar-track {
+    background: #f2f5fc;
+  }
+
+  .service-list-left::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 767.98px) {
+  .services1-page {
+    .service-section-hero-title {
+      max-width: 80%;
+      font-size: 3rem;
+    }
+    .service-section-hero p {
+      font-size: 1rem;
+      max-width: 80%;
+    }
+    .service-lists {
+      flex-direction: column;
+    }
+
+    .service-list-left {
+      max-height: 300px;
+      border-right: none;
+      margin-bottom: 2rem;
+    }
+
+    .service-list-right {
+      width: 100%;
+    }
+  }
+}
