@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
-  <body class="schedule-page">
+  <body class="schedule-step1-page">
     <!-- Header -->
     <header class="header">
       <nav class="navbar navbar-expand-lg">
@@ -75,14 +75,29 @@
       </div>
     </section>
     <section class="pickup-form-section">
-      <h2 class="pickup-form-title">
-        this is all it takes for you to get premium service at your doorstep
-      </h2>
+      <div class="container">
+        <div class="stepper">
+          <!-- <div class="step active">1</div>
+          <div class="step-line step-line-active"></div> -->
+          <div class="step">1</div>
+          <div class="step-line"></div>
+          <div class="step">2</div>
+          <div class="step-line"></div>
+          <div class="step">3</div>
+          <div class="step-line"></div>
+          <div class="step">4</div>
+        </div>
+      </div>
+      <h2 class="pickup-form-title">register and set your location</h2>
+      <p class="pickup-form-subtitle">
+        Enter your basic details to let us help you to schedule your free home
+        pickup
+      </p>
       <div class="pickup-form-container">
         <form
           class="pickup-form"
           id="scheduleForm"
-          action="./schedule_step1.html"
+          action="./schedule_step2.html"
           method="GET"
         >
           <input type="text" name="name" placeholder="name" required />
@@ -103,11 +118,10 @@
             <option value="bangalore">bangalore</option>
           </select>
 
-          <button type="submit">schedule pickup</button>
+          <button type="submit">Next &nbsp ></button>
         </form>
       </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
