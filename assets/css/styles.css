@@ -1452,7 +1452,7 @@ Schedule pickup page
 }
 
 /*--------------------------------------------------------------
-Schedule pickup page
+Schedule pickup 1 page
 --------------------------------------------------------------*/
 .schedule-step1-page {
   .hero-section {
@@ -1464,19 +1464,19 @@ Schedule pickup page
     );
 
     color: #fff;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: lowercase;
     font-weight: 400;
     margin-bottom: 1rem;
   }
 
   .hero-content p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
@@ -1591,7 +1591,7 @@ Schedule pickup page
   }
 
   .pickup-form button:hover {
-    background-color: #0033a1; /* Slightly darker on hover */
+    background-color: var(--color-secondary); /* Slightly darker on hover */
   }
 }
 
@@ -1632,19 +1632,19 @@ Schedule pickup 2 page
     );
 
     color: #fff;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
   }
 
   .hero-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     text-transform: lowercase;
     font-weight: 400;
     margin-bottom: 1rem;
   }
 
   .hero-content p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
@@ -1698,7 +1698,6 @@ Schedule pickup 2 page
 
   /* Container */
   .pickup-form-container {
-    max-width: 600px;
     margin: 0 auto;
   }
 
@@ -1716,26 +1715,47 @@ Schedule pickup 2 page
     margin-bottom: 1rem;
     text-transform: lowercase;
   }
-  .pickup-form button {
-    background-color: var(--color-secondary); /* Adjust to your brand color */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.2rem 3rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-transform: lowercase;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s ease;
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 30px 0;
   }
-
-  .pickup-form button:hover {
-    background-color: #0033a1; /* Slightly darker on hover */
+  .service {
+    text-align: center;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 8rem;
+  }
+  .service img {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 10px;
+  }
+  .service:hover,
+  .service.active {
+    transform: scale(1.05);
+    border: 2px solid var(--color-secondary);
+  }
+  .btn-primary {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 0.2rem 3rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-secondary);
   }
 }
 
 @media (max-width: 767.98px) {
-  .schedule-step1-page {
+  .schedule-step2-page {
     .hero-section {
       padding: 5rem 2rem;
       text-align: center;
@@ -1750,6 +1770,419 @@ Schedule pickup 2 page
     }
     .pickup-form-title {
       font-size: 1.4rem;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+Schedule pickup 3 page
+--------------------------------------------------------------*/
+.schedule-step3-page {
+  .hero-section {
+    background: radial-gradient(
+      111.25% 77.21% at 50.02% 27.24%,
+      var(--color-primary) 0%,
+      var(--color-primary) 51%,
+      var(--color-secondary) 100%
+    );
+
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 0;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+  .hero-content-highlight {
+    color: var(--color-secondary);
+  }
+  .stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    outline: 1px solid var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .step.active {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+  .step-line-active {
+    background-color: var(--color-primary);
+  }
+  .step-line {
+    flex-grow: 1;
+    height: 0.7rem;
+    border: 2px solid var(--color-primary);
+    border-right: thick;
+    border-left: thick;
+    /* margin: 0 10px; */
+  }
+
+  .pickup-form-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+  }
+
+  .pickup-form-container {
+    margin: 0 auto;
+  }
+
+  .pickup-form-title {
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: lowercase;
+  }
+  .pickup-form-subtitle {
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+  }
+  .time-picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      31deg,
+      rgba(255, 255, 255, 0) 14%,
+      rgba(255, 255, 255, 1) 37%
+    );
+
+    margin-top: 20px;
+  }
+
+  .picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    height: 120px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    border-radius: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
+    mask-image: linear-gradient(0deg, #000 95%, transparent);
+    -webkit-mask-image: linear-gradient(0deg, #000 95%, transparent);
+  }
+
+  .picker::-webkit-scrollbar {
+    display: none;
+  }
+
+  .picker div {
+    font-size: 24px;
+    color: #d1d8e0;
+    padding: 10px;
+    scroll-snap-align: center;
+  }
+
+  .picker div.active {
+    color: var(--color-secondary);
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .separator {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-secondary);
+  }
+  .btn-primary {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 0.2rem 3rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-secondary);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .schedule-step3-page {
+    .hero-section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    .pickup-form-title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+Schedule pickup 4 page
+--------------------------------------------------------------*/
+.schedule-step4-page {
+  .hero-section {
+    background: radial-gradient(
+      111.25% 77.21% at 50.02% 27.24%,
+      var(--color-primary) 0%,
+      var(--color-primary) 51%,
+      var(--color-secondary) 100%
+    );
+
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 0;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+  .hero-content-highlight {
+    color: var(--color-secondary);
+  }
+  .stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--color-primary);
+    outline: 1px solid var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  .step.active {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+  .step-line-active {
+    background-color: var(--color-primary);
+  }
+  .step-line {
+    flex-grow: 1;
+    height: 0.7rem;
+    border: 2px solid var(--color-primary);
+    border-right: thick;
+    border-left: thick;
+    /* margin: 0 10px; */
+  }
+
+  .pickup-form-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+  }
+
+  .pickup-form-container {
+    margin: 0 auto;
+    max-width: 45vw;
+  }
+
+  .pickup-form-title {
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: lowercase;
+  }
+  .pickup-form-subtitle {
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+  }
+  .custom-card {
+    background: rgba(224, 245, 255, 0.5);
+    border-radius: 8px;
+  }
+  .label-text {
+    font-size: 0.85rem;
+    text-transform: lowercase;
+    color: var(--color-primary); /* Adjust text color if you like */
+  }
+  .value-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-secondary); /* Adjust text color if you like */
+  }
+  .btn-primary {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 0.2rem 3rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-secondary);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .schedule-step4-page {
+    .hero-section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    .pickup-form-title {
+      font-size: 1.4rem;
+    }
+    .pickup-form-container {
+      max-width: 80vw;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+Schedule pickup submit page
+--------------------------------------------------------------*/
+.schedule-step5-page {
+  .hero-section {
+    background: radial-gradient(
+      111.25% 77.21% at 50.02% 27.24%,
+      var(--color-primary) 0%,
+      var(--color-primary) 51%,
+      var(--color-secondary) 100%
+    );
+
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 0;
+    text-transform: lowercase;
+    font-weight: 600;
+  }
+  .hero-content-highlight {
+    color: var(--color-secondary);
+  }
+
+  .pickup-form-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+  }
+
+  .pickup-form-container {
+    margin: 0 auto;
+    max-width: 45vw;
+  }
+  .schedule-submit-img {
+    width: 15rem;
+  }
+  .pickup-form-subtitle {
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+  }
+
+  .btn-primary {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 0.2rem 3rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-secondary);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .schedule-step5-page {
+    .hero-section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    .pickup-form-container {
+      max-width: 80vw;
     }
   }
 }

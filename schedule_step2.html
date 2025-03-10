@@ -86,12 +86,73 @@
           <div class="step">4</div>
         </div>
       </div>
-      <h2 class="pickup-form-title">register and set your location</h2>
+      <h2 class="pickup-form-title">choose your laundry service</h2>
       <p class="pickup-form-subtitle">
-        Enter your basic details to let us help you to schedule your free home
-        pickup
+        select from our wide variety of services that fit your requirements and
+        needs
       </p>
-      <div class="pickup-form-container"></div>
+      <div class="pickup-form-container">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+              <div class="service-container">
+                <div
+                  class="service"
+                  onclick="selectService(this)"
+                  data-service="Dry Cleaning"
+                >
+                  <img
+                    src="./assets/img/schedulepage2.png"
+                    alt="Dry Cleaning"
+                  />
+                  <p>dry cleaning</p>
+                </div>
+                <div
+                  class="service"
+                  onclick="selectService(this)"
+                  data-service="Laundry"
+                >
+                  <img src="./assets/img/schedulepage2.1.png" alt="Laundry" />
+                  <p>laundry</p>
+                </div>
+                <div
+                  class="service"
+                  onclick="selectService(this)"
+                  data-service="Home Cleaning"
+                >
+                  <img
+                    src="./assets/img/schedulepage2.2.png"
+                    alt="Home Cleaning"
+                  />
+                  <p>home cleaning</p>
+                </div>
+                <div
+                  class="service"
+                  onclick="selectService(this)"
+                  data-service="Ironing"
+                >
+                  <img src="./assets/img/schedulepage2.3.png" alt="Ironing" />
+                  <p>ironing</p>
+                </div>
+                <div
+                  class="service"
+                  onclick="selectService(this)"
+                  data-service="Shoe Cleaning"
+                >
+                  <img
+                    src="./assets/img/schedulepage2.4.png"
+                    alt="Shoe Cleaning"
+                  />
+                  <p>shoe cleaning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="getSelectedService()">
+            next &gt;
+          </button>
+        </div>
+      </div>
     </section>
     <!-- Footer -->
     <footer class="footer">
@@ -212,6 +273,6 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/schedulepage.js"></script>
+    <script src="assets/js/schedulestep2.js"></script>
   </body>
 </html>

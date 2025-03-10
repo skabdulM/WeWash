@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
-  <body class="schedule-step1-page">
+  <body class="schedule-step5-page">
     <!-- Header -->
     <header class="header">
       <nav class="navbar navbar-expand-lg">
@@ -75,60 +75,21 @@
       </div>
     </section>
     <section class="pickup-form-section">
-      <div class="container">
-        <div class="stepper">
-          <!-- <div class="step active">1</div>
-          <div class="step-line step-line-active"></div> -->
-          <div class="step">1</div>
-          <div class="step-line"></div>
-          <div class="step">2</div>
-          <div class="step-line"></div>
-          <div class="step">3</div>
-          <div class="step-line"></div>
-          <div class="step">4</div>
-        </div>
-      </div>
-      <h2 class="pickup-form-title">register and set your location</h2>
+      <img
+        src="./assets/img/schedulesubmit.svg"
+        width="15rem"
+        alt=""
+        srcset=""
+        class="schedule-submit-img"
+      />
       <p class="pickup-form-subtitle">
-        Enter your basic details to let us help you to schedule your free home
-        pickup
+        hurray your pickup is scheduled! Our team will contact you shortly to
+        know the details
       </p>
-      <div class="pickup-form-container">
-        <form
-          class="pickup-form"
-          id="scheduleForm"
-          action="./schedule_step2.html"
-          method="GET"
-        >
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="name"
-            required
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            pattern="[0-9]{10}"
-            id="phone"
-            placeholder="mobile number"
-            required
-          />
-
-          <select id="location" name="location" required>
-            <option value="" disabled selected>location</option>
-            <option value="mumbai">mumbai</option>
-            <option value="delhi">delhi</option>
-            <option value="bangalore">bangalore</option>
-          </select>
-
-          <button type="submit">Next &nbsp &gt;</button>
-        </form>
-      </div>
+      <a href="./index.html">
+        <button class="btn btn-primary">back to home</button></a
+      >
     </section>
-    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div
@@ -247,6 +208,5 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/schedulestep1.js"></script>
   </body>
 </html>
