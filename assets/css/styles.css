@@ -130,12 +130,18 @@ a:hover {
   .header {
     padding: 1rem 0;
   }
+  .navbar .nav-item-button {
+    padding-top: 0.5rem !important;
+  }
 }
 /* this is added due to bootstrap nav icon appearance */
 @media (max-width: 991.7px) {
   .navbar-mobile-view {
     align-items: start !important;
     padding-top: 1rem;
+  }
+  .navbar .nav-item-button {
+    padding-top: 0.5rem !important;
   }
 }
 
@@ -260,11 +266,10 @@ a:hover {
       height: 15%;
       width: 60%;
       font-size: small;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       margin-top: 4rem;
       .input-line {
         border-right: 2px solid var(--color-primary);
-        width: 30%;
       }
       .input-card-custom {
         height: 100%;
@@ -284,20 +289,33 @@ a:hover {
       .select-card {
         display: flex;
         width: 40%;
+        margin-right: 2rem;
         justify-content: space-between;
         .location-icon {
-          width: 3rem;
+          width: 2.5rem;
           height: 100%;
         }
+      }
+      .select-card :hover {
+        cursor: pointer;
       }
       .button-card-custom {
         display: flex;
         align-items: center;
+        width: 25%;
         justify-content: center;
         background-color: var(--color-secondary);
-        width: 20%;
-        margin-left: 2rem;
+        border-radius: 1rem;
         font-size: x-large;
+      }
+      .discount-badge {
+        position: absolute;
+        top: -2rem;
+        right: -3rem;
+        width: 6rem; /* Adjust size as needed */
+      }
+      .discount-badge img {
+        width: 100%;
       }
     }
   }
@@ -343,12 +361,12 @@ a:hover {
 .about-us-section {
   height: auto;
   margin-bottom: 10rem;
-  background: linear-gradient(to bottom, 30%, #fff 30%);
   .comparison-section {
     display: flex;
     align-items: center;
     gap: 40px;
     justify-content: space-evenly;
+    margin-bottom: 15rem;
   }
   .image-container {
     display: flex;
@@ -357,14 +375,16 @@ a:hover {
   .image-card {
     background: white;
     padding: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 17px 37px 0px rgba(0, 68, 157, 0.2);
     border-radius: 12px;
     text-align: center;
     width: 25rem;
-    transform: rotate(-10deg);
     transition: transform 0.3s ease-in-out;
     &.after-card {
-      transform: rotate(10deg);
+      transform: rotate(12deg) translateY(20px); /* Tilt and move down */
+    }
+    &.before-card {
+      transform: rotate(-12deg) translateY(-60px);
     }
     img {
       width: 100%;
@@ -390,7 +410,7 @@ a:hover {
     height: 4rem;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 20px 35.5px 0px rgba(0, 68, 157, 0.44);
     transition: transform 0.2s ease-in-out;
     &:hover {
       transform: scale(1.1);
@@ -653,7 +673,7 @@ a:hover {
   .hero {
     .container {
       clip-path: ellipse(180% 100% at top);
-      height: 130vh;
+      height: 120vh;
       .strikethrough:before {
         border-top: 4px solid;
         border-color: var(--color-secondary);
@@ -674,7 +694,7 @@ a:hover {
       z-index: 1;
     }
     .hero-text {
-      width: 100%;
+      width: 80%;
       font-size: 3rem;
       text-align: center;
     }
@@ -696,8 +716,9 @@ a:hover {
     .about-us {
       font-size: 2rem;
       text-align: center;
+      margin-top: 0;
       .about-us-title {
-        padding-top: 1.5rem;
+        padding: 1.5rem 1rem;
         font-size: 3rem;
       }
     }
@@ -727,10 +748,13 @@ a:hover {
     }
     .image-card {
       width: 90%;
-      transform: rotate(0deg);
     }
     .after-card {
-      transform: rotate(0deg) !important;
+      transform: rotate(0deg) translateY(0px) !important;
+    }
+
+    .before-card {
+      transform: rotate(0deg) translateY(0px) !important;
     }
   }
   .stats-section {
@@ -940,7 +964,7 @@ a:hover {
       font-size: 2rem;
       text-align: center;
       .about-us-title {
-        padding-top: 1.5rem;
+        padding: 1.5rem 1rem;
         font-size: 2.5rem;
       }
     }
@@ -962,11 +986,13 @@ a:hover {
     }
     .image-card {
       width: 90%;
-      transform: rotate(0deg);
+    }
+    .after-card {
+      transform: rotate(0deg) translateY(0px) !important;
     }
 
-    .after-card {
-      transform: rotate(0deg) !important;
+    .before-card {
+      transform: rotate(0deg) translateY(0px) !important;
     }
   }
   .stats-section {
@@ -1213,12 +1239,11 @@ Our Process page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .process-section1 {
     padding: 3rem 1rem;
@@ -1228,6 +1253,7 @@ Our Process page
     text-align: center;
     font-size: 4rem;
     margin-bottom: 2rem;
+    text-transform: lowercase;
   }
 
   .features-section {
@@ -1245,7 +1271,7 @@ Our Process page
     grid-template-columns: 1fr auto;
     gap: 1.5rem;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .feature-text h3 {
@@ -1259,10 +1285,12 @@ Our Process page
     margin: 0;
     line-height: 2rem;
     text-align: justify;
+    margin-right: 4rem;
+    text-transform: lowercase;
   }
 
   .feature-icon img {
-    width: 6rem;
+    width: 8rem;
     height: auto;
   }
 }
@@ -1278,7 +1306,7 @@ Our Process page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
     .process-heading {
@@ -1288,15 +1316,17 @@ Our Process page
     }
     .feature-text ul {
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
     .feature-item {
       grid-template-columns: 1fr;
-      text-align: center; /* optional: center text & icon */
+      text-align: center;
     }
 
     .feature-icon {
       order: -1;
-      margin-bottom: 1rem; /* Spacing between the icon and text */
+      margin-bottom: 1rem;
     }
   }
 }
@@ -2190,12 +2220,11 @@ Services page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .services-container {
     max-width: 1200px;
@@ -2204,6 +2233,7 @@ Services page
 
   .service-page-card {
     width: 100%;
+    border-radius: 2rem;
     height: 100%;
     position: relative;
   }
@@ -2216,10 +2246,10 @@ Services page
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-transform: lowercase;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 2rem;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -2228,8 +2258,6 @@ Services page
     align-items: center;
   }
 
-  /* If your Bootstrap version doesn’t include object-fit classes,
-   you can define them manually: */
   .object-fit-cover {
     object-fit: cover;
   }
@@ -2245,7 +2273,7 @@ Services page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
   }
