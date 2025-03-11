@@ -184,10 +184,27 @@ a:hover {
     margin-bottom: 10px;
   }
 
-  .location h6 {
+  .location summary {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 5px;
+  }
+  details summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  details summary::before {
+    content: "▶";
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg); /* Rotate when open */
   }
 
   .phone {
@@ -198,22 +215,32 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer {
+    .container {
+      margin-left: 2rem;
+    }
     .top-section {
       flex-direction: column;
-      align-items: flex-start; /* Align content to the left */
+      align-items: flex-start;
     }
     .logo {
-      margin-bottom: 15px; /* Add spacing between logo and social icons */
+      margin-bottom: 15px;
       display: flex;
       justify-content: start;
       width: 100%;
     }
     .social-icons {
-      width: 100%; /* Take full width */
+      width: 100%;
       display: flex;
-      justify-content: flex-start; /* Align icons to the left */
+      justify-content: flex-start;
       margin-top: 15px;
-      gap: 10px; /* Add space between icons */
+      gap: 10px;
+    }
+
+    details {
+      display: block;
+    }
+    details[open] summary::after {
+      content: "";
     }
   }
 }
@@ -1062,12 +1089,11 @@ Franchise page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
 
   .franchise-section {
@@ -1182,7 +1208,7 @@ Franchise page
       font-size: 3rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1rem;
     }
     .franchise-heading {
@@ -1355,12 +1381,11 @@ Schedule pickup page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1447,7 +1472,7 @@ Schedule pickup page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
     .pickup-form-title {
@@ -1484,12 +1509,11 @@ Schedule pickup 1 page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1615,7 +1639,7 @@ Schedule pickup 1 page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
     .pickup-form-title {
@@ -1652,12 +1676,11 @@ Schedule pickup 2 page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1724,6 +1747,10 @@ Schedule pickup 2 page
     margin-bottom: 1rem;
     text-transform: lowercase;
   }
+
+  .service-container-cards {
+    min-height: 15rem;
+  }
   .service-container {
     display: flex;
     flex-wrap: wrap;
@@ -1774,7 +1801,7 @@ Schedule pickup 2 page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
     .pickup-form-title {
@@ -1807,12 +1834,11 @@ Schedule pickup 3 page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1954,7 +1980,7 @@ Schedule pickup 3 page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
     .pickup-form-title {
@@ -1987,12 +2013,11 @@ Schedule pickup 4 page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -2095,7 +2120,7 @@ Schedule pickup 4 page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
     .pickup-form-title {
@@ -2131,12 +2156,11 @@ Schedule pickup submit page
     margin-bottom: 1rem;
   }
 
-  .hero-content p {
+  .hero-content h3 {
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
     text-transform: lowercase;
-    font-weight: 600;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -2186,7 +2210,7 @@ Schedule pickup submit page
       font-size: 4rem;
     }
 
-    .hero-content p {
+    .hero-content h3 {
       font-size: 1.2rem;
     }
 
@@ -2350,10 +2374,10 @@ Services1 page
 
   .service-list-left {
     flex: 1;
-    max-height: 400px; /* Adjust to your desired scrollable height */
-    overflow-y: auto; /* makes this column scrollable if content exceeds 400px */
-    padding-right: 1rem; /* spacing near scrollbar */
-    border-right: 1px solid #ddd; /* optional divider */
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+    border-right: 1px solid #ddd;
   }
 
   /* Category Section */
@@ -2438,7 +2462,7 @@ Services1 page
     }
 
     .service-list-left {
-      max-height: 300px;
+      max-height: 70vh;
       border-right: none;
       margin-bottom: 2rem;
     }
