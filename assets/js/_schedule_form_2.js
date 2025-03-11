@@ -20,6 +20,6 @@ function getSelectedService() {
     if (selectedService && customer_name && phone && location) {
         let serviceName = selectedService.getAttribute("data-service");
         const queryParams = new URLSearchParams({ name: customer_name, phone, location, service: serviceName }).toString();
-        window.location.href = `./schedule_step3.html?${queryParams}`;
+        window.location.href = `./schedule_form_3.html?${queryParams}`;
     }
 }

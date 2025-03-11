@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
-  <body class="services1-page">
+  <body class="schedule-step2-page">
     <!-- Header -->
     <header class="header">
       <nav class="navbar navbar-expand-lg">
@@ -56,7 +56,7 @@
                 <a class="nav-link" href="./process.html">our process</a>
               </li>
               <li class="nav-item-button">
-                <a href="./schedule_step1.html" class="schedule-pickup"
+                <a href="./schedule_form_1.html" class="schedule-pickup"
                   >schedule pickup</a
                 >
               </li>
@@ -65,136 +65,103 @@
         </div>
       </nav>
     </header>
-    <section class="service-section">
-      <div class="service-section-container">
-        <img src="./assets/img/services1.png" alt="" srcset="" />
-        <div class="service-section-hero">
-          <h1 class="service-section-hero-title">washing/dry cleaning</h1>
-          <p>
-            At WeWash, we stand out with our top-notch service, exceptional
-            quality, and eco-friendly products as we ensure every garment
-            receives meticulous care, using the finest detergents and packaging
-            to keep your clothes pristine.
-          </p>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Schedule a pickup now!</h1>
+        <h3>
+          Enter the details and schedule a
+          <span class="hero-content-highlight">free</span> home pickup today!
+        </h3>
+      </div>
+    </section>
+    <section class="pickup-form-section">
+      <div class="container">
+        <div class="stepper">
+          <div class="step active">1</div>
+          <div class="step-line step-line-active"></div>
+          <div class="step">2</div>
+          <div class="step-line"></div>
+          <div class="step">3</div>
+          <div class="step-line"></div>
+          <div class="step">4</div>
+        </div>
+      </div>
+      <h2 class="pickup-form-title">choose your laundry service</h2>
+      <p class="pickup-form-subtitle">
+        select from our wide variety of services that fit your requirements and
+        needs
+      </p>
+      <div class="pickup-form-container">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+              <div class="service-container-cards">
+                <div class="service-container">
+                  <div
+                    class="service"
+                    onclick="selectService(this)"
+                    data-service="Dry Cleaning"
+                  >
+                    <img
+                      src="./assets/img/schedulepage2.png"
+                      alt="Dry Cleaning"
+                    />
+                    <p>dry cleaning</p>
+                  </div>
+                  <div
+                    class="service"
+                    onclick="selectService(this)"
+                    data-service="Laundry"
+                  >
+                    <img src="./assets/img/schedulepage2.1.png" alt="Laundry" />
+                    <p>laundry</p>
+                  </div>
+                  <div
+                    class="service"
+                    onclick="selectService(this)"
+                    data-service="Home Cleaning"
+                  >
+                    <img
+                      src="./assets/img/schedulepage2.2.png"
+                      alt="Home Cleaning"
+                    />
+                    <p>home cleaning</p>
+                  </div>
+                  <div
+                    class="service"
+                    onclick="selectService(this)"
+                    data-service="Ironing"
+                  >
+                    <img src="./assets/img/schedulepage2.3.png" alt="Ironing" />
+                    <p>ironing</p>
+                  </div>
+                  <div
+                    class="service"
+                    onclick="selectService(this)"
+                    data-service="Shoe Cleaning"
+                  >
+                    <img
+                      src="./assets/img/schedulepage2.4.png"
+                      alt="Shoe Cleaning"
+                    />
+                    <p>shoe cleaning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="getSelectedService()">
+            next
+            <img
+              src="./assets/img/arrowright.svg"
+              style="padding-left: 1rem"
+              alt=""
+              srcset=""
+            />
+          </button>
         </div>
       </div>
     </section>
-    <section class="service-listing">
-      <div class="service-listing-wrapper">
-        <!-- Tag List -->
-        <div class="service-tags">
-          <span class="tag">tops</span>
-          <span class="tag">bottoms</span>
-          <span class="tag">ladies wear</span>
-          <span class="tag">outerwear</span>
-          <span class="tag">innerwear</span>
-          <span class="tag">accessories</span>
-          <span class="tag">bathwear</span>
-          <span class="tag">kids wear</span>
-        </div>
-
-        <div class="service-lists">
-          <div class="service-list-left">
-            <div class="service-category">
-              <h3 class="category-title">tops</h3>
-              <ul class="category-items">
-                <li>
-                  <span class="item-name">shirt</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">t-shirt</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">polo t-shirt</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">hoodie</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">turtle neck</span>
-                  <span class="item-price">₹94</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="service-category">
-              <h3 class="category-title">bottoms</h3>
-              <ul class="category-items">
-                <li>
-                  <span class="item-name">shorts</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">trousers</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">jeans</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">joggers</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">capris</span>
-                  <span class="item-price">₹94</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="service-category">
-              <h3 class="category-title">ladies wear</h3>
-              <ul class="category-items">
-                <li>
-                  <span class="item-name">shirt</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">t-shirt</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">polo t-shirt</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">hoodie</span>
-                  <span class="item-price">₹94</span>
-                </li>
-                <li>
-                  <span class="item-name">turtle neck</span>
-                  <span class="item-price">₹94</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Add more categories as needed... -->
-          </div>
-
-          <!-- Right Column: Other Services -->
-          <div class="service-list-right">
-            <h3 class="other-services-title">other services</h3>
-            <ul class="other-services-list">
-              <li>dry cleaning</li>
-              <li>washing</li>
-              <li>ironing</li>
-              <li>home cleaning</li>
-              <li>shoe/bag cleaning</li>
-              <li>sofa cleaning</li>
-              <li>carpet cleaning</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
 
     <footer class="footer">
@@ -275,7 +242,7 @@
             <div class="footer-links">
               <a href="./index.html#aboutus">about us</a>
               <a href="./services.html">services</a>
-              <a href="./services1.html">pricing</a>
+              <a href="./services_link_1.html">pricing</a>
               <a href="./process.html">our process</a>
               <a href="./franchise.html">franchise</a>
               <a href="#">terms of use</a>
@@ -337,10 +304,10 @@
         </div>
       </div>
     </footer>
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/_footer.js"></script>
+    <script src="assets/js/_schedule_form_2.js"></script>
   </body>
 </html>

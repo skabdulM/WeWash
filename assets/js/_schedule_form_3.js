@@ -41,7 +41,7 @@ function getSelectedTime() {
     if (hour && minute && ampm && customer_name && phone && location && service) {
         let selectedTime = `${hour}:${minute} ${ampm}`;
         const queryParams = new URLSearchParams({ name: customer_name, phone, location, service, time: selectedTime }).toString();
-        window.location.href = `./schedule_step4.html?${queryParams}`;
+        window.location.href = `./schedule_form_4.html?${queryParams}`;
     }
 }
 

@@ -51,7 +51,7 @@ function sendEmail(user) {
         emailjs.send("service_f8wejru", "template_7s58pki", params)
             .then(function (response) {
                 console.log("Email sent successfully!", response);
-                window.location.href = "./schedule_submit.html";
+                window.location.href = "./schedule_submitted.html";
 
             }, function (error) {
                 alert("Failed to send email:", error);

@@ -150,10 +150,10 @@ a:hover {
 --------------------------------------------------------------*/
 .footer {
   background: linear-gradient(90deg, #03a0fc 0%, #00449d 80.1%);
-  color: white;
+  color: var(--color-default);
   padding: 40px 0;
   a {
-    color: white;
+    color: var(--color-default);
     text-decoration: none;
     transition: 0.3s;
   }
@@ -169,7 +169,7 @@ a:hover {
   }
 
   .social-icons a {
-    margin-right: 1rem; /* Spacing between icons */
+    padding-right: 1rem; /* Spacing between icons */
   }
 
   .social-icons svg:hover {
@@ -189,24 +189,9 @@ a:hover {
     font-size: 1.5rem;
     margin-bottom: 5px;
   }
-  details summary {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  details > summary {
+    list-style-type: none;
   }
-
-  details summary::before {
-    content: "▶";
-    font-size: 0.8rem;
-    margin-right: 1rem;
-    transition: transform 0.3s ease;
-  }
-
-  details[open] summary::before {
-    transform: rotate(90deg); /* Rotate when open */
-  }
-
   .phone {
     font-size: 14px;
     margin-top: 5px;
@@ -216,7 +201,7 @@ a:hover {
 @media (max-width: 768px) {
   .footer {
     .container {
-      margin-left: 2rem;
+      padding-left: 2rem;
     }
     .top-section {
       flex-direction: column;
@@ -236,11 +221,26 @@ a:hover {
       gap: 10px;
     }
 
-    details {
-      display: block;
+    .location summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 1rem;
+      padding-right: 1rem;
     }
-    details[open] summary::after {
-      content: "";
+
+    .location summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .location summary::after {
+      content: "▶";
+      transition: transform 0.3s ease;
+      font-size: 14px;
+    }
+    .location details[open] summary::after {
+      transform: rotate(90deg);
     }
   }
 }
@@ -541,7 +541,7 @@ a:hover {
 # Section 4
 --------------------------------------------------------------*/
 .section4 {
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
   padding: 2rem;
   margin-top: 6rem;
   .container {
@@ -590,7 +590,7 @@ a:hover {
   }
   .express-service {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 8rem;
   }
   .express-image {
     max-width: 100%;
@@ -659,8 +659,8 @@ a:hover {
 # Section 6
 --------------------------------------------------------------*/
 .section6 {
-  margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
   text-align: center;
   .franchise-section {
     padding: 2rem 1rem;
@@ -875,7 +875,7 @@ a:hover {
     }
     .express-service {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
     .express-image {
       max-width: 100%;
@@ -891,6 +891,15 @@ a:hover {
       font-size: 1rem;
       transition: background-color 0.3s ease;
       margin-top: 1rem;
+    }
+  }
+  .section6 {
+    padding: 0 4rem;
+    .franchise-title {
+      font-size: 3rem;
+    }
+    .franchise-text {
+      font-size: 1.5rem;
     }
   }
 }
@@ -1313,6 +1322,7 @@ Our Process page
     text-align: justify;
     margin-right: 4rem;
     text-transform: lowercase;
+    font-size: large;
   }
 
   .feature-icon img {
@@ -1358,135 +1368,7 @@ Our Process page
 }
 
 /*--------------------------------------------------------------
-Schedule pickup page
---------------------------------------------------------------*/
-.schedule-page {
-  .hero-section {
-    background: radial-gradient(
-      111.25% 77.21% at 50.02% 27.24%,
-      var(--color-primary) 0%,
-      var(--color-primary) 51%,
-      var(--color-secondary) 100%
-    );
-
-    color: #fff;
-    padding: 5rem 1rem;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 6rem;
-    text-transform: lowercase;
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-
-  .hero-content h3 {
-    font-size: 2rem;
-    font-family: var(--font-secondary);
-    margin-bottom: 0;
-    text-transform: lowercase;
-  }
-  .hero-content-highlight {
-    color: var(--color-secondary);
-  }
-
-  .pickup-form-section {
-    padding: 3rem 1rem;
-    text-align: center;
-    font-family: var(--font-secondary);
-    color: var(--color-secondary);
-  }
-
-  /* Container */
-  .pickup-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  /* Heading */
-  .pickup-form-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    color: var(--color-secondary);
-    text-transform: lowercase;
-  }
-
-  .pickup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-  }
-
-  .pickup-form input,
-  .pickup-form select {
-    width: 100%;
-    font-weight: 400;
-    padding: 1rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0px 17px 37px 0px rgba(0, 68, 157, 0.1);
-
-    color: var(--color-secondary);
-    outline: none;
-  }
-
-  .pickup-form input::placeholder,
-  .pickup-form select option {
-    color: var(--color-secondary);
-    text-transform: lowercase;
-  }
-
-  /* Button */
-  .pickup-form button {
-    background-color: var(--color-secondary); /* Adjust to your brand color */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    text-transform: lowercase;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
-    transition: background-color 0.3s ease;
-  }
-
-  .pickup-form button:hover {
-    background-color: #0033a1; /* Slightly darker on hover */
-  }
-}
-
-@media (max-width: 767.98px) {
-  .schedule-page {
-    .hero-section {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-    }
-
-    .hero-content h3 {
-      font-size: 1.2rem;
-    }
-    .pickup-form-title {
-      font-size: 1.4rem;
-    }
-
-    .pickup-form {
-      gap: 1rem;
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-Schedule pickup 1 page
+Schedule pickup form 1 page
 --------------------------------------------------------------*/
 .schedule-step1-page {
   .hero-section {
@@ -1588,6 +1470,16 @@ Schedule pickup 1 page
     gap: 1.5rem;
     align-items: center;
   }
+  .pickup-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='blue'><path d='M7 10l5 5 5-5z'/></svg>")
+      no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    border: 1px solid #ccc;
+  }
 
   .pickup-form input,
   .pickup-form select {
@@ -1598,7 +1490,6 @@ Schedule pickup 1 page
     border: none;
     border-radius: 8px;
     box-shadow: 0px 17px 37px 0px rgba(0, 68, 157, 0.1);
-
     color: var(--color-secondary);
     outline: none;
   }
@@ -1616,7 +1507,7 @@ Schedule pickup 1 page
     border: none;
     border-radius: 8px;
     padding: 0.2rem 3rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     text-transform: lowercase;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -1782,7 +1673,7 @@ Schedule pickup 2 page
     border: none;
     padding: 0.2rem 3rem;
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
   }
   .btn-primary:hover {
@@ -1961,7 +1852,7 @@ Schedule pickup 3 page
     border: none;
     padding: 0.2rem 3rem;
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
   }
   .btn-primary:hover {
@@ -2102,7 +1993,7 @@ Schedule pickup 4 page
     border: none;
     padding: 0.2rem 3rem;
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .btn-primary:hover {
     background-color: var(--color-secondary);
@@ -2192,7 +2083,7 @@ Schedule pickup submit page
     border: none;
     padding: 0.2rem 3rem;
     border-radius: 8px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .btn-primary:hover {
     background-color: var(--color-secondary);
