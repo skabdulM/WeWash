@@ -4,7 +4,6 @@ const imagePairs = [
 ];
 
 let currentIndex = 0;
-
 const beforeImage = document.querySelector(".before-card .comparison-image");
 const afterImage = document.querySelector(".after-card .comparison-image");
 const leftButton = document.querySelector(".left-button");
@@ -13,6 +12,20 @@ const rightButton = document.querySelector(".right-button");
 function updateImages() {
     beforeImage.src = imagePairs[currentIndex].before;
     afterImage.src = imagePairs[currentIndex].after;
+    animateCards();
+}
+
+function animateCards() {
+    const beforeCard = document.querySelector('.before-card');
+    const afterCard = document.querySelector('.after-card');
+
+    beforeCard.classList.add('animate');
+    afterCard.classList.add('animate');
+
+    setTimeout(() => {
+        beforeCard.classList.remove('animate');
+        afterCard.classList.remove('animate');
+    }, 500);
 }
 
 function navigateImages(direction) {
@@ -20,7 +33,25 @@ function navigateImages(direction) {
     updateImages();
 }
 
-leftButton.addEventListener("click", () => navigateImages(-1));
-rightButton.addEventListener("click", () => navigateImages(1));
+leftButton.addEventListener("click", () => {
+    navigateImages(-1);
+    resetCarouselTimer();
+});
+
+rightButton.addEventListener("click", () => {
+    navigateImages(1);
+    resetCarouselTimer();
+});
+
+let carouselTimer = setInterval(() => {
+    navigateImages(1);
+}, 3000);
+
+function resetCarouselTimer() {
+    clearInterval(carouselTimer);
+    carouselTimer = setInterval(() => {
+        navigateImages(1);
+    }, 3000);
+}
 
 updateImages();

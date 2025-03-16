@@ -408,7 +408,7 @@ a:hover {
     width: 25rem;
     transition: transform 0.3s ease-in-out;
     &.after-card {
-      transform: rotate(12deg) translateY(20px); /* Tilt and move down */
+      transform: rotate(12deg) translateY(20px);
     }
     &.before-card {
       transform: rotate(-12deg) translateY(-60px);
@@ -452,6 +452,34 @@ a:hover {
       width: 1.2rem;
     }
   }
+}
+
+/* Animation keyframes for rotation on update */
+@keyframes rotateBefore {
+  0% {
+    transform: translateX(-60rem) translateY(20rem) rotate(-90deg); /* start far left */
+  }
+  100% {
+    transform: rotate(-12deg) translateY(-60px);
+  }
+}
+
+@keyframes rotateAfter {
+  0% {
+    transform: translateX(60rem) translateY(20rem) rotate(90deg); /* start far left */
+  }
+  100% {
+    transform: rotate(12deg) translateY(20px);
+  }
+}
+
+/* Animation class that triggers the keyframes */
+.before-card.animate {
+  animation: rotateBefore 0.5s ease-in-out;
+}
+
+.after-card.animate {
+  animation: rotateAfter 0.5s ease-in-out;
 }
 
 /*--------------------------------------------------------------
