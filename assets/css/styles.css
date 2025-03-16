@@ -475,11 +475,11 @@ a:hover {
 
 /* Animation class that triggers the keyframes */
 .before-card.animate {
-  animation: rotateBefore 0.5s ease-in-out;
+  animation: rotateBefore 0.6s ease-in-out;
 }
 
 .after-card.animate {
-  animation: rotateAfter 0.5s ease-in-out;
+  animation: rotateAfter 0.6s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -668,8 +668,14 @@ a:hover {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
   .promo-content h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    color: var(--color-secondary);
     margin-bottom: 1rem;
+  }
+  .promo-content p {
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    margin-bottom: 1.5rem;
   }
   .promo-button {
     background-color: var(--color-secondary);

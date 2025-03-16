@@ -25,7 +25,7 @@ function animateCards() {
     setTimeout(() => {
         beforeCard.classList.remove('animate');
         afterCard.classList.remove('animate');
-    }, 500);
+    }, 600);
 }
 
 function navigateImages(direction) {
