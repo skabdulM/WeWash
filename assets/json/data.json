@@ -1,0 +1,81 @@
+{
+  "title": "shoe cleaning / repair",
+  "categories": [
+    {
+      "name": "Articles",
+      "items": [
+        { "name": "Chef Coat / Lab Apron", "cleaning": 165, "ironing": 85 },
+        { "name": "Cap / Hat", "cleaning": 130, "ironing": null },
+        { "name": "Fabric Belt", "cleaning": 59, "ironing": 30 },
+        { "name": "Under Linen", "cleaning": 90, "ironing": 35 },
+        { "name": "Vest", "cleaning": 90, "ironing": 35 },
+        { "name": "Handkerchief", "cleaning": 30, "ironing": 20 },
+        { "name": "Socks", "cleaning": 40, "ironing": null },
+        { "name": "Neck Tie", "cleaning": 70, "ironing": 40 },
+        { "name": "Apron", "cleaning": 135, "ironing": 60 },
+        { "name": "Bath Robe", "cleaning": 211, "ironing": 95 },
+        { "name": "Jump Suit", "cleaning": 190, "ironing": 95 },
+        { "name": "Sleeping bag", "cleaning": 275, "ironing": 135 },
+        { "name": "Burqa Long (1 Pc)", "cleaning": 295, "ironing": 135 },
+        { "name": "Bohri Burga (2 Pc)", "cleaning": 340, "ironing": 160 }
+      ]
+    },
+    {
+      "name": "Bottom Wear",
+      "items": [
+        { "name": "Trouser Basic", "cleaning": 105, "ironing": 50 },
+        { "name": "Trouser With Print", "cleaning": 115, "ironing": 50 },
+        { "name": "Trouser Silk", "cleaning": 115, "ironing": 50 },
+        { "name": "Trouser With Light Work", "cleaning": 115, "ironing": 50 },
+        { "name": "Trouser With Heavy Work", "cleaning": 125, "ironing": 50 },
+        { "name": "Trouser Wool", "cleaning": 130, "ironing": 50 },
+        { "name": "Jeans Basic", "cleaning": 105, "ironing": 50 },
+        { "name": "Jeans With Print", "cleaning": 115, "ironing": 50 },
+        { "name": "Jeans With Light Work", "cleaning": 115, "ironing": 50 },
+        { "name": "Jeans With Heavy Work", "cleaning": 125, "ironing": 50 },
+        { "name": "Track Pant Basic", "cleaning": 105, "ironing": 50 },
+        { "name": "Track Pant With Print", "cleaning": 115, "ironing": 50 },
+        {
+          "name": "Track Pant With Light Work",
+          "cleaning": 115,
+          "ironing": 50
+        },
+        { "name": "Track Pant With Heavy Work", "cleaning": 120, "ironing": 50 }
+      ]
+    },
+    {
+      "name": "Saree",
+      "items": [
+        { "name": "Saree Basic", "cleaning": 285, "ironing": 150 },
+        { "name": "Saree Basic Light Work", "cleaning": 385, "ironing": 150 },
+        { "name": "Saree Basic Heavy work", "cleaning": 485, "ironing": 170 },
+        { "name": "Saree Silk / Banarasi", "cleaning": 450, "ironing": 150 },
+        {
+          "name": "Saree Silk / Banarasi Light Work",
+          "cleaning": 550,
+          "ironing": 150
+        },
+        {
+          "name": "Saree Silk / Banarasi Heavy Work",
+          "cleaning": 650,
+          "ironing": 170
+        },
+        { "name": "Saree Designer", "cleaning": 750, "ironing": 195 },
+        { "name": "Saree Delicate", "cleaning": 450, "ironing": 170 },
+        { "name": "Saree Bridal", "cleaning": 850, "ironing": 260 }
+      ]
+    },
+    {
+      "name": "Blouse",
+      "items": [
+        { "name": "Blouse Basic", "cleaning": 95, "ironing": 50 },
+        { "name": "Blouse Silk", "cleaning": 140, "ironing": 50 },
+        { "name": "Blouse With Light Work", "cleaning": 175, "ironing": 60 },
+        { "name": "Blouse With Heavy Work", "cleaning": 210, "ironing": 75 },
+        { "name": "Blouse Designer", "cleaning": 250, "ironing": 80 },
+        { "name": "Blouse Delicate", "cleaning": 150, "ironing": 75 },
+        { "name": "Blouse Bridal", "cleaning": 295, "ironing": 95 }
+      ]
+    }
+  ]
+}

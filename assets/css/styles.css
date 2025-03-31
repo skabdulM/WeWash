@@ -519,6 +519,7 @@ a:hover {
   gap: 2rem;
   padding: 2rem;
 }
+
 .service-card {
   width: 20%;
   border-radius: 20px;
@@ -539,7 +540,7 @@ a:hover {
   color: var(--color-default);
   font-size: 1.2rem;
   padding: 0.5rem;
-  text-transform: lowercase;
+
   font-family: var(--font-secondary);
   font-weight: 500;
   margin: 0;
@@ -578,7 +579,7 @@ a:hover {
   }
   .section-title {
     text-align: center;
-    text-transform: lowercase;
+
     font-size: 6rem;
     margin-bottom: 1.5rem;
     color: var(--color-secondary);
@@ -664,7 +665,7 @@ a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    text-transform: lowercase;
+
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
   .promo-content h2 {
@@ -685,8 +686,38 @@ a:hover {
     cursor: pointer;
     border-radius: 4px;
     font-size: 1rem;
-    text-transform: lowercase;
     transition: background-color 0.3s ease;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section5 {
+    .promo-image {
+      height: 45vh;
+    }
+    .promo-content {
+      width: inherit;
+    }
+    .promo-content h2 {
+      font-size: 2rem;
+    }
+    .promo-content p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1212px) {
+  .section5 {
+    .promo-content {
+      width: inherit;
+    }
+    .promo-content h2 {
+      font-size: 3rem;
+    }
+    .promo-content p {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -707,7 +738,7 @@ a:hover {
   .franchise-title {
     font-size: 4rem;
     color: var(--color-secondary);
-    text-transform: lowercase;
+
     margin-bottom: 1rem;
   }
   .franchise-text {
@@ -863,7 +894,7 @@ a:hover {
       color: var(--color-default);
       font-size: 1.2rem;
       padding: 0.5rem;
-      text-transform: lowercase;
+
       font-family: var(--font-secondary);
       font-weight: 500;
       margin: 0;
@@ -1127,7 +1158,7 @@ Franchise page
 
   .hero-content h1 {
     font-size: 6rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -1136,7 +1167,6 @@ Franchise page
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
 
   .franchise-section {
@@ -1172,14 +1202,13 @@ Franchise page
   .franchise-text h2 {
     font-family: var(--font-primary);
     color: var(--color-primary);
-    text-transform: lowercase;
+
     margin-bottom: 1rem;
   }
 
   .franchise-list {
     list-style-type: disc;
     margin: 1rem 0 0 1.5rem;
-    text-transform: lowercase;
   }
 
   .franchise-image {
@@ -1207,7 +1236,6 @@ Franchise page
   .section-title {
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase;
   }
 
   .section-list {
@@ -1303,7 +1331,7 @@ Our Process page
 
   .hero-content h1 {
     font-size: 6rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -1312,7 +1340,6 @@ Our Process page
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .process-section1 {
     padding: 3rem 1rem;
@@ -1322,7 +1349,6 @@ Our Process page
     text-align: center;
     font-size: 4rem;
     margin-bottom: 2rem;
-    text-transform: lowercase;
   }
 
   .features-section {
@@ -1347,7 +1373,6 @@ Our Process page
     margin: 0 0 0.5rem;
     color: var(--color-primary);
     font-size: 1.5rem;
-    text-transform: lowercase;
   }
 
   .feature-text ul {
@@ -1355,7 +1380,7 @@ Our Process page
     line-height: 2rem;
     text-align: justify;
     margin-right: 4rem;
-    text-transform: lowercase;
+
     font-size: large;
   }
 
@@ -1420,7 +1445,7 @@ Schedule pickup form 1 page
 
   .hero-content h1 {
     font-size: 5rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -1429,7 +1454,6 @@ Schedule pickup form 1 page
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1489,13 +1513,11 @@ Schedule pickup form 1 page
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-secondary);
-    text-transform: lowercase;
   }
   .pickup-form-subtitle {
     font-family: var(--font-secondary);
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase;
   }
 
   .pickup-form {
@@ -1531,7 +1553,6 @@ Schedule pickup form 1 page
   .pickup-form input::placeholder,
   .pickup-form select option {
     color: var(--color-secondary);
-    text-transform: lowercase;
   }
 
   /* Button */
@@ -1543,7 +1564,7 @@ Schedule pickup form 1 page
     padding: 0.2rem 3rem;
     font-size: 1.8rem;
     cursor: pointer;
-    text-transform: lowercase;
+
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: background-color 0.3s ease;
   }
@@ -1596,7 +1617,7 @@ Schedule pickup 2 page
 
   .hero-content h1 {
     font-size: 5rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -1605,7 +1626,6 @@ Schedule pickup 2 page
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1664,13 +1684,11 @@ Schedule pickup 2 page
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-secondary);
-    text-transform: lowercase;
   }
   .pickup-form-subtitle {
     font-family: var(--font-secondary);
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase;
   }
 
   .service-container-cards {
@@ -1754,7 +1772,7 @@ Schedule pickup 3 page
 
   .hero-content h1 {
     font-size: 5rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -1763,7 +1781,6 @@ Schedule pickup 3 page
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -1820,13 +1837,11 @@ Schedule pickup 3 page
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-secondary);
-    text-transform: lowercase;
   }
   .pickup-form-subtitle {
     font-family: var(--font-secondary);
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase;
   }
   .time-picker {
     display: flex;
@@ -1933,7 +1948,7 @@ Schedule pickup 4 page
 
   .hero-content h1 {
     font-size: 5rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -1942,7 +1957,6 @@ Schedule pickup 4 page
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -2000,13 +2014,11 @@ Schedule pickup 4 page
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-secondary);
-    text-transform: lowercase;
   }
   .pickup-form-subtitle {
     font-family: var(--font-secondary);
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase;
   }
   .custom-card {
     background: rgba(224, 245, 255, 0.5);
@@ -2014,7 +2026,7 @@ Schedule pickup 4 page
   }
   .label-text {
     font-size: 0.85rem;
-    text-transform: lowercase;
+
     color: var(--color-primary); /* Adjust text color if you like */
   }
   .value-text {
@@ -2076,7 +2088,7 @@ Schedule pickup submit page
 
   .hero-content h1 {
     font-size: 5rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -2085,7 +2097,6 @@ Schedule pickup submit page
     font-size: 1.5rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .hero-content-highlight {
     color: var(--color-secondary);
@@ -2109,7 +2120,6 @@ Schedule pickup submit page
     font-family: var(--font-secondary);
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: lowercase;
   }
 
   .btn-primary {
@@ -2148,7 +2158,7 @@ Schedule pickup submit page
 /*--------------------------------------------------------------
 Services page
 --------------------------------------------------------------*/
-.services-page {
+.services_page {
   .hero-section {
     background: radial-gradient(
       111.25% 77.21% at 50.02% 27.24%,
@@ -2164,7 +2174,7 @@ Services page
 
   .hero-content h1 {
     font-size: 6rem;
-    text-transform: lowercase;
+
     font-weight: 400;
     margin-bottom: 1rem;
   }
@@ -2173,7 +2183,6 @@ Services page
     font-size: 2rem;
     font-family: var(--font-secondary);
     margin-bottom: 0;
-    text-transform: lowercase;
   }
   .services-container {
     max-width: 1200px;
@@ -2185,6 +2194,7 @@ Services page
     border-radius: 2rem;
     height: 100%;
     position: relative;
+    cursor: pointer;
   }
 
   /* Overlay text */
@@ -2196,7 +2206,7 @@ Services page
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-size: 1.5rem;
-    text-transform: lowercase;
+
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     text-align: center;
@@ -2211,8 +2221,9 @@ Services page
     object-fit: cover;
   }
 }
+
 @media (max-width: 767.98px) {
-  .services-page {
+  .services_page {
     .hero-section {
       padding: 5rem 2rem;
       text-align: center;
@@ -2231,7 +2242,7 @@ Services page
 /*--------------------------------------------------------------
 Services1 page
 --------------------------------------------------------------*/
-.services_1 {
+.services_and_pricing {
   .service-section-container {
     position: relative;
     text-align: center;
@@ -2257,14 +2268,12 @@ Services1 page
   .service-section-hero-title {
     font-size: 6rem;
     color: var(--color-secondary);
-    text-transform: lowercase;
   }
   .service-section-hero p {
     font-size: 1.5rem;
     color: var(--color-secondary);
     max-width: 80%;
     text-align: justify;
-    text-transform: lowercase;
   }
   /* Main Section Wrapper */
   .service-listing {
@@ -2288,7 +2297,7 @@ Services1 page
     border: 3px solid rgba(3, 160, 252, 1);
     padding: 0.5rem 1rem;
     border-radius: 4rem;
-    text-transform: lowercase;
+
     cursor: pointer;
   }
 
@@ -2311,7 +2320,6 @@ Services1 page
   }
 
   .category-title {
-    text-transform: lowercase;
     margin-bottom: 2rem;
     font-size: 2rem;
   }
@@ -2333,16 +2341,11 @@ Services1 page
     border-bottom: 1px solid #ddd; /* line between items */
   }
 
-  .item-name {
-    text-transform: lowercase;
-  }
-
   .item-price {
     color: var(--color-primary);
   }
 
   .other-services-title {
-    text-transform: lowercase;
     margin-bottom: 1rem;
     font-size: 2rem;
   }
@@ -2356,7 +2359,6 @@ Services1 page
   .other-services-list li {
     color: var(--color-primary);
     margin-bottom: 0.5rem;
-    text-transform: lowercase;
   }
 
   .service-list-left::-webkit-scrollbar {
@@ -2373,7 +2375,7 @@ Services1 page
   }
 }
 @media (max-width: 767.98px) {
-  .services_1 {
+  .services_and_pricing {
     .service-section-hero-title {
       max-width: 80%;
       font-size: 3rem;

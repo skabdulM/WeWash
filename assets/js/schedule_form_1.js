@@ -1,7 +1,6 @@
 
 function populateFormFromQueryParams() {
     const params = new URLSearchParams(window.location.search);
-    console.log(params.get("name"));
 
     document.getElementById("name").value = params.get("name") || "";
     document.getElementById("phone").value = params.get("phone") || "";

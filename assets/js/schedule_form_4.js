@@ -43,7 +43,6 @@ function sendEmail(user) {
         service: user.service,
         time: user.time
     };
-    console.log("Sending email...", params);
 
     if (params.customer_name && params.phone && params.location && params.service && params.time) {
         console.log("Sending email...", params);
