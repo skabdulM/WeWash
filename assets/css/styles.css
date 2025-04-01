@@ -525,7 +525,7 @@ a:hover {
   border-radius: 20px;
   overflow: hidden;
   background: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
   text-align: center;
   position: relative;
 }
@@ -556,7 +556,8 @@ a:hover {
 .service-card:hover {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); */
 }
 .more-services-button {
   border: none;
@@ -2239,6 +2240,12 @@ Services page
   }
 }
 
+@media (min-width: 768px) {
+  .service-page-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+  }
+}
 /*--------------------------------------------------------------
 Services1 page
 --------------------------------------------------------------*/
@@ -2278,6 +2285,7 @@ Services1 page
   /* Main Section Wrapper */
   .service-listing {
     color: var(--color-secondary);
+    text-transform: capitalize;
     padding: 2rem;
   }
 
@@ -2312,6 +2320,10 @@ Services1 page
     overflow-y: auto;
     padding-right: 1rem;
     border-right: 1px solid #ddd;
+  }
+
+  .service-list-left:hover {
+    cursor: default;
   }
 
   /* Category Section */
@@ -2357,8 +2369,10 @@ Services1 page
   }
 
   .other-services-list li {
-    color: var(--color-primary);
     margin-bottom: 0.5rem;
+    a {
+      color: var(--color-primary);
+    }
   }
 
   .service-list-left::-webkit-scrollbar {
