@@ -2394,6 +2394,11 @@ Services1 page
     background: #ccc;
     border-radius: 4px;
   }
+  .tag.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
 }
 @media (max-width: 767.98px) {
   .services_and_pricing {

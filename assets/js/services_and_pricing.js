@@ -93,3 +93,63 @@ function update_title(serviceKey) {
         console.error('Failed to load data:', error);
     }
 })();
+document.addEventListener("DOMContentLoaded", () => {
+    // Toggle active class on tag click
+    document.querySelectorAll(".service-tags .tag").forEach(tag => {
+        tag.addEventListener("click", function () {
+            this.classList.toggle("active");
+            filterServiceList();
+        });
+    });
+
+    function filterServiceList() {
+        // Get an array of all active tag texts in lowercase
+        const activeTags = Array.from(document.querySelectorAll(".service-tags .tag.active"))
+            .map(tag => tag.textContent.trim().toLowerCase());
+        console.log(activeTags);
+
+        // If no tags are selected, show everything
+        if (activeTags.length === 0) {
+            document.querySelectorAll(".service-category").forEach(category => {
+                category.style.display = "block";
+                category.querySelectorAll(".category-items li").forEach(item => {
+                    item.style.display = "flex";
+                });
+            });
+            return;
+        }
+
+        // Otherwise, filter categories and items
+        document.querySelectorAll(".service-category").forEach(category => {
+            const categoryTitle = category.querySelector(".category-title").textContent.toLowerCase();
+            // Check if the category title matches any active tag
+            const categoryMatches = activeTags.some(tag => categoryTitle.includes(tag));
+
+            let anyItemMatches = false;
+            // Iterate over each item in this category
+            category.querySelectorAll(".category-items li").forEach(item => {
+                const itemName = item.querySelector(".item-name").textContent.toLowerCase();
+                // Check if the item name matches any active tag
+                console.log(item);
+
+                const itemMatches = activeTags.some(tag => itemName.includes(tag));
+
+                // If the category title matches, show all items; else, only show matching items.
+                if (categoryMatches) {
+                    item.style.display = "flex";
+                    anyItemMatches = true;
+                } else {
+                    item.style.display = itemMatches ? "flex" : "none";
+                    if (itemMatches) anyItemMatches = true;
+                }
+            });
+
+            // Show the category if the title or at least one item matches; otherwise, hide it.
+            if (categoryMatches || anyItemMatches) {
+                category.style.display = "block";
+            } else {
+                category.style.display = "none";
+            }
+        });
+    }
+});
