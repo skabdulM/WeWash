@@ -1,17 +1,20 @@
-function createPicker(elementId, values) {
+function createPicker(elementId, values, defaultValue) {
     const picker = document.getElementById(elementId);
     let items = [...values, ...values, ...values]; // Duplicate items for seamless loop
+
+    let defaultIndex = values.indexOf(defaultValue);
+    if (defaultIndex === -1) defaultIndex = 0; // Fallback to first item if not found
 
     items.forEach((val, index) => {
         const div = document.createElement("div");
         div.textContent = val;
-        if (index === values.length) div.classList.add("active"); // Center one as default
+        if (index === values.length + defaultIndex) div.classList.add("active"); // Default selection
         picker.appendChild(div);
     });
 
     // Set default scroll position (middle)
     let itemHeight = picker.children[0].offsetHeight;
-    picker.scrollTop = itemHeight * values.length;
+    picker.scrollTop = itemHeight * (values.length + defaultIndex);
 
     // Handle looping effect
     picker.addEventListener("scroll", function () {
@@ -28,15 +31,16 @@ function createPicker(elementId, values) {
     });
 }
 
-createPicker("hours", ["12", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"]);
-createPicker("minutes", ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"]);
-createPicker("ampm", ["AM", "PM"]);
+// Set default time to 11:00 AM
+createPicker("hours", ["12", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"], "11");
+createPicker("minutes", ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"], "00");
+createPicker("ampm", ["AM", "PM"], "AM");
 
 function getSelectedTime() {
     let hour = document.querySelector("#hours .active")?.textContent;
     let minute = document.querySelector("#minutes .active")?.textContent;
     let ampm = document.querySelector("#ampm .active")?.textContent;
-    const { customer_name, phone, location, service } = populateFormFromQueryParams()
+    const { customer_name, phone, location, service } = populateFormFromQueryParams();
 
     if (hour && minute && ampm && customer_name && phone && location && service) {
         let selectedTime = `${hour}:${minute} ${ampm}`;
@@ -53,5 +57,5 @@ function populateFormFromQueryParams() {
     const customer_name = params.get("name") || "";
     const service = params.get("service") || "";
 
-    return { customer_name, phone, location, service }
+    return { customer_name, phone, location, service };
 }

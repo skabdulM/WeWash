@@ -556,7 +556,7 @@ a:hover {
 .service-card:hover {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
-  cursor: default;
+  cursor: pointer;
   /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); */
 }
 .more-services-button {
@@ -1538,6 +1538,10 @@ Schedule pickup form 1 page
     border: 1px solid #ccc;
   }
 
+  .pickup-form select:hover {
+    cursor: pointer;
+  }
+
   .pickup-form input,
   .pickup-form select {
     width: 100%;
@@ -1864,15 +1868,15 @@ Schedule pickup 3 page
     flex-direction: column;
     align-items: center;
     width: 70px;
-    height: 120px;
+    height: 110px;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     border-radius: 10px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     position: relative;
-    mask-image: linear-gradient(0deg, #000 95%, transparent);
-    -webkit-mask-image: linear-gradient(0deg, #000 95%, transparent);
+    mask-image: linear-gradient(0deg, #000 100%, transparent);
+    -webkit-mask-image: linear-gradient(0deg, #000 100%, transparent);
   }
 
   .picker::-webkit-scrollbar {
@@ -1882,7 +1886,7 @@ Schedule pickup 3 page
   .picker div {
     font-size: 24px;
     color: #d1d8e0;
-    padding: 10px;
+    padding: 5px;
     scroll-snap-align: center;
   }
 
@@ -2185,6 +2189,7 @@ Services page
     font-family: var(--font-secondary);
     margin-bottom: 0;
   }
+
   .services-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -2197,7 +2202,9 @@ Services page
     position: relative;
     cursor: pointer;
   }
-
+  .services-gallery select {
+    cursor: pointer;
+  }
   /* Overlay text */
   .service-overlay {
     position: absolute;
