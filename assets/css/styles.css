@@ -290,14 +290,19 @@ a:hover {
       transform: rotate(-20deg);
     }
     .card {
-      height: 15%;
       width: 60%;
       font-size: small;
       border-radius: 1.5rem;
       margin-top: 4rem;
+
+      .card-body {
+        height: 15%;
+      }
+
       .input-line {
         border-right: 2px solid var(--color-primary);
       }
+
       .input-card-custom {
         height: 100%;
         font-size: xx-large;
@@ -305,14 +310,17 @@ a:hover {
         color: var(--color-secondary);
         font-weight: 400;
       }
+
       .input-card-custom::placeholder {
         color: var(--color-secondary);
       }
+
       .select-card-custom {
         font-size: xx-large;
         font-family: var(--font-secondary);
         color: var(--color-secondary);
       }
+
       .select-card {
         display: flex;
         width: 40%;
@@ -323,6 +331,7 @@ a:hover {
           height: 100%;
         }
       }
+
       .select-card :hover {
         cursor: pointer;
       }
