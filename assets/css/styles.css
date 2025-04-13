@@ -354,7 +354,24 @@ a:hover {
         width: 100%;
       }
     }
+
+    .card-mobile-view {
+      min-width: 30vw;
+      margin-top: 4rem;
+      input,
+      select {
+        text-align: center;
+        min-width: 5rem;
+        color: var(--color-secondary);
+      }
+
+      .card-custom-button-mobile {
+        background-color: var(--color-secondary);
+        color: var(--color-default);
+      }
+    }
   }
+
   .text {
     display: flex;
     flex-direction: column;
@@ -994,50 +1011,6 @@ a:hover {
 
       .card {
         display: none !important;
-        height: auto;
-        width: auto;
-        font-size: small;
-        border-radius: 2rem;
-        margin-top: 4rem;
-        align-items: center;
-        flex-direction: column;
-        .input-line {
-          border-right: none;
-          width: auto;
-        }
-        .input-card-custom {
-          height: 100%;
-          font-size: large;
-          font-family: var(--font-secondary);
-          color: var(--color-secondary);
-          font-weight: 400;
-        }
-        .input-card-custom::placeholder {
-          color: var(--color-secondary);
-        }
-        .select-card-custom {
-          font-size: large;
-          font-family: var(--font-secondary);
-          color: #00449d;
-        }
-        .select-card {
-          display: flex;
-          width: 40%;
-          justify-content: space-between;
-          .location-icon {
-            width: 3rem;
-            height: 100%;
-          }
-        }
-        .button-card-custom {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: var(--color-secondary);
-          width: 20%;
-          margin-left: 2rem;
-          font-size: large;
-        }
       }
     }
     .text {
@@ -1146,6 +1119,12 @@ a:hover {
       transition: 0.3s ease-in-out;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+
+@media (min-width: 1212.2px) {
+  .card-mobile-view {
+    display: none;
   }
 }
 
@@ -1796,12 +1775,8 @@ Services1 page
 
   .service-select-location {
     color: var(--color-secondary);
-    flex: 1;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding-right: 1rem;
-    border-right: 1px solid #ddd;
   }
+
   .service-select-location:hover {
     cursor: pointer;
   }
