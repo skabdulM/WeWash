@@ -55,3 +55,31 @@ function resetCarouselTimer() {
 }
 
 updateImages();
+
+
+function setHeroHeight() {
+    const heroText = document.querySelector('.hero .text');
+    const hero = document.querySelector('.hero .container');
+    const viewportHeight = window.innerHeight;
+
+    let totalHeight = 0;
+
+    // Sum the heights of all visible child elements inside .text
+    Array.from(heroText.children).forEach(child => {
+        const style = getComputedStyle(child);
+        const marginTop = parseFloat(style.marginTop);
+        const marginBottom = parseFloat(style.marginBottom);
+        const childHeight = child.getBoundingClientRect().height + marginTop + marginBottom;
+        totalHeight += childHeight;
+    });
+
+    // Convert 3rem to px
+    const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const paddingHeight = 1 * remInPx;
+
+    hero.style.height = `${totalHeight + paddingHeight}px`;
+}
+
+setHeroHeight();
+window.addEventListener('resize', setHeroHeight);
+window.addEventListener('orientationchange', setHeroHeight);

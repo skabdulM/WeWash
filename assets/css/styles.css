@@ -270,8 +270,7 @@ a:hover {
     color: white;
     clip-path: ellipse(85% 100% at top);
     min-width: 100vw;
-    height: 130vh;
-    /* height: 150vh; */
+    min-height: 130dvh;
     .strikethrough {
       position: relative;
     }
@@ -792,7 +791,8 @@ a:hover {
   .hero {
     .container {
       clip-path: ellipse(180% 100% at top);
-      height: 120vh;
+      min-height: 100dvh;
+      height: auto; /* Allow JS to set specific height */
       .strikethrough:before {
         border-top: 4px solid;
         border-color: var(--color-secondary);
@@ -1003,7 +1003,6 @@ a:hover {
   .hero {
     .container {
       clip-path: ellipse(150% 100% at top);
-      height: 110vh;
       .strikethrough:before {
         border-top: 4px solid;
         border-color: var(--color-secondary);
