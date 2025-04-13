@@ -1003,6 +1003,7 @@ a:hover {
   .hero {
     .container {
       clip-path: ellipse(150% 100% at top);
+      min-height: 130dvh;
       .strikethrough:before {
         border-top: 4px solid;
         border-color: var(--color-secondary);
