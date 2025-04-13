@@ -270,8 +270,7 @@ a:hover {
     color: white;
     clip-path: ellipse(85% 100% at top);
     min-width: 100vw;
-    height: 130vh;
-    /* height: 150vh; */
+    min-height: 130dvh;
     .strikethrough {
       position: relative;
     }
@@ -290,14 +289,19 @@ a:hover {
       transform: rotate(-20deg);
     }
     .card {
-      height: 15%;
       width: 60%;
       font-size: small;
       border-radius: 1.5rem;
       margin-top: 4rem;
+
+      .card-body {
+        height: 15%;
+      }
+
       .input-line {
         border-right: 2px solid var(--color-primary);
       }
+
       .input-card-custom {
         height: 100%;
         font-size: xx-large;
@@ -305,14 +309,17 @@ a:hover {
         color: var(--color-secondary);
         font-weight: 400;
       }
+
       .input-card-custom::placeholder {
         color: var(--color-secondary);
       }
+
       .select-card-custom {
         font-size: xx-large;
         font-family: var(--font-secondary);
         color: var(--color-secondary);
       }
+
       .select-card {
         display: flex;
         width: 40%;
@@ -323,6 +330,7 @@ a:hover {
           height: 100%;
         }
       }
+
       .select-card :hover {
         cursor: pointer;
       }
@@ -345,7 +353,24 @@ a:hover {
         width: 100%;
       }
     }
+
+    .card-mobile-view {
+      min-width: 30vw;
+      margin-top: 4rem;
+      input,
+      select {
+        text-align: center;
+        min-width: 5rem;
+        color: var(--color-secondary);
+      }
+
+      .card-custom-button-mobile {
+        background-color: var(--color-secondary);
+        color: var(--color-default);
+      }
+    }
   }
+
   .text {
     display: flex;
     flex-direction: column;
@@ -766,7 +791,8 @@ a:hover {
   .hero {
     .container {
       clip-path: ellipse(180% 100% at top);
-      height: 120vh;
+      min-height: 100dvh;
+      height: auto; /* Allow JS to set specific height */
       .strikethrough:before {
         border-top: 4px solid;
         border-color: var(--color-secondary);
@@ -977,7 +1003,7 @@ a:hover {
   .hero {
     .container {
       clip-path: ellipse(150% 100% at top);
-      height: 110vh;
+      min-height: 130dvh;
       .strikethrough:before {
         border-top: 4px solid;
         border-color: var(--color-secondary);
@@ -985,50 +1011,6 @@ a:hover {
 
       .card {
         display: none !important;
-        height: auto;
-        width: auto;
-        font-size: small;
-        border-radius: 2rem;
-        margin-top: 4rem;
-        align-items: center;
-        flex-direction: column;
-        .input-line {
-          border-right: none;
-          width: auto;
-        }
-        .input-card-custom {
-          height: 100%;
-          font-size: large;
-          font-family: var(--font-secondary);
-          color: var(--color-secondary);
-          font-weight: 400;
-        }
-        .input-card-custom::placeholder {
-          color: var(--color-secondary);
-        }
-        .select-card-custom {
-          font-size: large;
-          font-family: var(--font-secondary);
-          color: #00449d;
-        }
-        .select-card {
-          display: flex;
-          width: 40%;
-          justify-content: space-between;
-          .location-icon {
-            width: 3rem;
-            height: 100%;
-          }
-        }
-        .button-card-custom {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: var(--color-secondary);
-          width: 20%;
-          margin-left: 2rem;
-          font-size: large;
-        }
       }
     }
     .text {
@@ -1137,6 +1119,12 @@ a:hover {
       transition: 0.3s ease-in-out;
       box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+
+@media (min-width: 1212.2px) {
+  .card-mobile-view {
+    display: none;
   }
 }
 
@@ -1459,41 +1447,6 @@ Schedule pickup form 1 page
   .hero-content-highlight {
     color: var(--color-secondary);
   }
-  .stepper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  .step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid var(--color-primary);
-    outline: 1px solid var(--color-primary);
-    color: var(--color-secondary);
-    font-weight: 400;
-    font-size: 1.5rem;
-  }
-  .step.active {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-  }
-  .step-line-active {
-    background-color: var(--color-primary);
-  }
-  .step-line {
-    flex-grow: 1;
-    height: 0.7rem;
-    border: 2px solid var(--color-primary);
-    border-right: thick;
-    border-left: thick;
-    /* margin: 0 10px; */
-  }
 
   .pickup-form-section {
     padding: 3rem 1rem;
@@ -1502,7 +1455,6 @@ Schedule pickup form 1 page
     color: var(--color-secondary);
   }
 
-  /* Container */
   .pickup-form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -1543,7 +1495,8 @@ Schedule pickup form 1 page
   }
 
   .pickup-form input,
-  .pickup-form select {
+  .pickup-form select,
+  .pickup-form textarea {
     width: 100%;
     font-weight: 400;
     padding: 1rem;
@@ -1556,6 +1509,7 @@ Schedule pickup form 1 page
   }
 
   .pickup-form input::placeholder,
+  .pickup-form textarea::placeholder,
   .pickup-form select option {
     color: var(--color-secondary);
   }
@@ -1599,477 +1553,6 @@ Schedule pickup form 1 page
 
     .pickup-form {
       gap: 1rem;
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-Schedule pickup 2 page
---------------------------------------------------------------*/
-.schedule-step2-page {
-  .hero-section {
-    background: radial-gradient(
-      111.25% 77.21% at 50.02% 27.24%,
-      var(--color-primary) 0%,
-      var(--color-primary) 51%,
-      var(--color-secondary) 100%
-    );
-
-    color: #fff;
-    padding: 4rem 1rem;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 5rem;
-
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-
-  .hero-content h3 {
-    font-size: 1.5rem;
-    font-family: var(--font-secondary);
-    margin-bottom: 0;
-  }
-  .hero-content-highlight {
-    color: var(--color-secondary);
-  }
-  .stepper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  .step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid var(--color-primary);
-    outline: 1px solid var(--color-primary);
-    color: var(--color-secondary);
-    font-weight: 400;
-    font-size: 1.5rem;
-  }
-  .step.active {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-  }
-  .step-line-active {
-    background-color: var(--color-primary);
-  }
-  .step-line {
-    flex-grow: 1;
-    height: 0.7rem;
-    border: 2px solid var(--color-primary);
-    border-right: thick;
-    border-left: thick;
-    /* margin: 0 10px; */
-  }
-
-  .pickup-form-section {
-    padding: 3rem 1rem;
-    text-align: center;
-    font-family: var(--font-secondary);
-    color: var(--color-secondary);
-  }
-
-  /* Container */
-  .pickup-form-container {
-    margin: 0 auto;
-  }
-
-  /* Heading */
-  .pickup-form-title {
-    font-size: 2rem;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    color: var(--color-secondary);
-  }
-  .pickup-form-subtitle {
-    font-family: var(--font-secondary);
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-  }
-
-  .service-container-cards {
-    min-height: 15rem;
-  }
-  .service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 30px 0;
-  }
-  .service {
-    text-align: center;
-    color: var(--color-primary);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    padding: 1rem;
-    border-radius: 10px;
-    width: 8rem;
-  }
-  .service img {
-    width: 6rem;
-    height: 6rem;
-    margin-bottom: 10px;
-  }
-  .service:hover,
-  .service.active {
-    transform: scale(1.05);
-    border: 2px solid var(--color-secondary);
-  }
-  .btn-primary {
-    background-color: var(--color-secondary);
-    border: none;
-    padding: 0.2rem 3rem;
-    border-radius: 8px;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-  }
-  .btn-primary:hover {
-    background-color: var(--color-secondary);
-  }
-}
-
-@media (max-width: 767.98px) {
-  .schedule-step2-page {
-    .hero-section {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-    }
-
-    .hero-content h3 {
-      font-size: 1.2rem;
-    }
-    .pickup-form-title {
-      font-size: 1.4rem;
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-Schedule pickup 3 page
---------------------------------------------------------------*/
-.schedule-step3-page {
-  .hero-section {
-    background: radial-gradient(
-      111.25% 77.21% at 50.02% 27.24%,
-      var(--color-primary) 0%,
-      var(--color-primary) 51%,
-      var(--color-secondary) 100%
-    );
-
-    color: #fff;
-    padding: 4rem 1rem;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 5rem;
-
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-
-  .hero-content h3 {
-    font-size: 1.5rem;
-    font-family: var(--font-secondary);
-    margin-bottom: 0;
-  }
-  .hero-content-highlight {
-    color: var(--color-secondary);
-  }
-  .stepper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  .step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid var(--color-primary);
-    outline: 1px solid var(--color-primary);
-    color: var(--color-secondary);
-    font-weight: 400;
-    font-size: 1.5rem;
-  }
-  .step.active {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-  }
-  .step-line-active {
-    background-color: var(--color-primary);
-  }
-  .step-line {
-    flex-grow: 1;
-    height: 0.7rem;
-    border: 2px solid var(--color-primary);
-    border-right: thick;
-    border-left: thick;
-    /* margin: 0 10px; */
-  }
-
-  .pickup-form-section {
-    padding: 3rem 1rem;
-    text-align: center;
-    font-family: var(--font-secondary);
-    color: var(--color-secondary);
-  }
-
-  .pickup-form-container {
-    margin: 0 auto;
-  }
-
-  .pickup-form-title {
-    font-size: 2rem;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    color: var(--color-secondary);
-  }
-  .pickup-form-subtitle {
-    font-family: var(--font-secondary);
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-  }
-  .time-picker {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      31deg,
-      rgba(255, 255, 255, 0) 14%,
-      rgba(255, 255, 255, 1) 37%
-    );
-
-    margin-top: 20px;
-  }
-
-  .picker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70px;
-    height: 110px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    border-radius: 10px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    position: relative;
-    mask-image: linear-gradient(0deg, #000 100%, transparent);
-    -webkit-mask-image: linear-gradient(0deg, #000 100%, transparent);
-  }
-
-  .picker::-webkit-scrollbar {
-    display: none;
-  }
-
-  .picker div {
-    font-size: 24px;
-    color: #d1d8e0;
-    padding: 5px;
-    scroll-snap-align: center;
-  }
-
-  .picker div.active {
-    color: var(--color-secondary);
-    font-size: 36px;
-    font-weight: bold;
-  }
-
-  .separator {
-    font-size: 36px;
-    font-weight: bold;
-    color: var(--color-secondary);
-  }
-  .btn-primary {
-    background-color: var(--color-secondary);
-    border: none;
-    padding: 0.2rem 3rem;
-    border-radius: 8px;
-    font-size: 1.8rem;
-    margin-top: 2rem;
-  }
-  .btn-primary:hover {
-    background-color: var(--color-secondary);
-  }
-}
-
-@media (max-width: 767.98px) {
-  .schedule-step3-page {
-    .hero-section {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-    }
-
-    .hero-content h3 {
-      font-size: 1.2rem;
-    }
-    .pickup-form-title {
-      font-size: 1.4rem;
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-Schedule pickup 4 page
---------------------------------------------------------------*/
-.schedule-step4-page {
-  .hero-section {
-    background: radial-gradient(
-      111.25% 77.21% at 50.02% 27.24%,
-      var(--color-primary) 0%,
-      var(--color-primary) 51%,
-      var(--color-secondary) 100%
-    );
-
-    color: #fff;
-    padding: 4rem 1rem;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 5rem;
-
-    font-weight: 400;
-    margin-bottom: 1rem;
-  }
-
-  .hero-content h3 {
-    font-size: 1.5rem;
-    font-family: var(--font-secondary);
-    margin-bottom: 0;
-  }
-  .hero-content-highlight {
-    color: var(--color-secondary);
-  }
-  .stepper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  .step {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid var(--color-primary);
-    outline: 1px solid var(--color-primary);
-    color: var(--color-secondary);
-    font-weight: 400;
-    font-size: 1.5rem;
-  }
-  .step.active {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-  }
-  .step-line-active {
-    background-color: var(--color-primary);
-  }
-  .step-line {
-    flex-grow: 1;
-    height: 0.7rem;
-    border: 2px solid var(--color-primary);
-    border-right: thick;
-    border-left: thick;
-    /* margin: 0 10px; */
-  }
-
-  .pickup-form-section {
-    padding: 3rem 1rem;
-    text-align: center;
-    font-family: var(--font-secondary);
-    color: var(--color-secondary);
-  }
-
-  .pickup-form-container {
-    margin: 0 auto;
-    max-width: 45vw;
-  }
-
-  .pickup-form-title {
-    font-size: 2rem;
-    font-family: var(--font-secondary);
-    font-weight: 700;
-    color: var(--color-secondary);
-  }
-  .pickup-form-subtitle {
-    font-family: var(--font-secondary);
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-  }
-  .custom-card {
-    background: rgba(224, 245, 255, 0.5);
-    border-radius: 8px;
-  }
-  .label-text {
-    font-size: 0.85rem;
-
-    color: var(--color-primary); /* Adjust text color if you like */
-  }
-  .value-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-secondary); /* Adjust text color if you like */
-  }
-  .btn-primary {
-    background-color: var(--color-secondary);
-    border: none;
-    padding: 0.2rem 3rem;
-    border-radius: 8px;
-    font-size: 1.8rem;
-  }
-  .btn-primary:hover {
-    background-color: var(--color-secondary);
-  }
-}
-
-@media (max-width: 767.98px) {
-  .schedule-step4-page {
-    .hero-section {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-    }
-
-    .hero-content h3 {
-      font-size: 1.2rem;
-    }
-    .pickup-form-title {
-      font-size: 1.4rem;
-    }
-    .pickup-form-container {
-      max-width: 80vw;
     }
   }
 }
@@ -2289,6 +1772,15 @@ Services1 page
     max-width: 80%;
     text-align: justify;
   }
+
+  .service-select-location {
+    color: var(--color-secondary);
+  }
+
+  .service-select-location:hover {
+    cursor: pointer;
+  }
+
   /* Main Section Wrapper */
   .service-listing {
     color: var(--color-secondary);
