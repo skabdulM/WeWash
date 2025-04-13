@@ -1793,6 +1793,19 @@ Services1 page
     max-width: 80%;
     text-align: justify;
   }
+
+  .service-select-location {
+    color: var(--color-secondary);
+    flex: 1;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+    border-right: 1px solid #ddd;
+  }
+  .service-select-location:hover {
+    cursor: pointer;
+  }
+
   /* Main Section Wrapper */
   .service-listing {
     color: var(--color-secondary);

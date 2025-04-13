@@ -6,72 +6,72 @@
       "items": [
         {
           "name": "Chef Coat / Lab Apron",
-          "cleaning": "***",
-          "ironing": 85
+          "cleaning": 89,
+          "ironing": 89
         },
         {
           "name": "Cap / Hat",
-          "cleaning": "***",
+          "cleaning": 89,
           "ironing": null
         },
         {
           "name": "Fabric Belt",
-          "cleaning": "***",
-          "ironing": 30
+          "cleaning": 89,
+          "ironing": 89
         },
         {
           "name": "Under Linen",
-          "cleaning": "***",
-          "ironing": 35
+          "cleaning": 89,
+          "ironing": 89
         },
         {
           "name": "Vest",
-          "cleaning": "***",
-          "ironing": 35
+          "cleaning": 89,
+          "ironing": 89
         },
         {
           "name": "Handkerchief",
-          "cleaning": "***",
-          "ironing": 20
+          "cleaning": 89,
+          "ironing": 89
         },
         {
           "name": "Socks",
-          "cleaning": "***",
+          "cleaning": 89,
           "ironing": null
         },
         {
           "name": "Neck Tie",
-          "cleaning": "***",
-          "ironing": 40
+          "cleaning": 89,
+          "ironing": 89
         },
         {
           "name": "Apron",
-          "cleaning": "***",
+          "cleaning": 135,
           "ironing": 60
         },
         {
           "name": "Bath Robe",
-          "cleaning": "***",
+          "cleaning": 211,
           "ironing": 95
         },
         {
           "name": "Jump Suit",
-          "cleaning": "***",
+          "cleaning": 190,
           "ironing": 95
         },
         {
           "name": "Sleeping bag",
-          "cleaning": "***",
+          "cleaning": 275,
           "ironing": 135
         },
         {
           "name": "Burqa Long (1 Pc)",
-          "cleaning": "***",
+          "cleaning": 295,
           "ironing": 135
         },
         {
           "name": "Bohri Burga (2 Pc)",
-          "cleaning": "***",
+          "cleaning": 340,
           "ironing": 160
         }
       ]
@@ -81,72 +81,72 @@
       "items": [
         {
           "name": "Trouser Basic",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "Trouser With Print",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Trouser Silk",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Trouser With Light Work",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Trouser With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 125,
           "ironing": 50
         },
         {
           "name": "Trouser Wool",
-          "cleaning": "***",
+          "cleaning": 130,
           "ironing": 50
         },
         {
           "name": "Jeans Basic",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "Jeans With Print",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Jeans With Light Work",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Jeans With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 125,
           "ironing": 50
         },
         {
           "name": "Track Pant Basic",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "Track Pant With Print",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Track Pant With Light Work",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Track Pant With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 120,
           "ironing": 50
         }
       ]
@@ -156,47 +156,47 @@
       "items": [
         {
           "name": "Saree Basic",
-          "cleaning": "***",
+          "cleaning": 285,
           "ironing": 150
         },
         {
           "name": "Saree Basic Light Work",
-          "cleaning": "***",
+          "cleaning": 385,
           "ironing": 150
         },
         {
           "name": "Saree Basic Heavy work",
-          "cleaning": "***",
+          "cleaning": 485,
           "ironing": 170
         },
         {
           "name": "Saree Silk / Banarasi",
-          "cleaning": "***",
+          "cleaning": 450,
           "ironing": 150
         },
         {
           "name": "Saree Silk / Banarasi Light Work",
-          "cleaning": "***",
+          "cleaning": 550,
           "ironing": 150
         },
         {
           "name": "Saree Silk / Banarasi Heavy Work",
-          "cleaning": "***",
+          "cleaning": 650,
           "ironing": 170
         },
         {
           "name": "Saree Designer",
-          "cleaning": "***",
+          "cleaning": 750,
           "ironing": 195
         },
         {
           "name": "Saree Delicate",
-          "cleaning": "***",
+          "cleaning": 450,
           "ironing": 170
         },
         {
           "name": "Saree Bridal",
-          "cleaning": "***",
+          "cleaning": 850,
           "ironing": 260
         }
       ]
@@ -206,37 +206,37 @@
       "items": [
         {
           "name": "Blouse Basic",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 50
         },
         {
           "name": "Blouse Silk",
-          "cleaning": "***",
+          "cleaning": 140,
           "ironing": 50
         },
         {
           "name": "Blouse With Light Work",
-          "cleaning": "***",
+          "cleaning": 175,
           "ironing": 60
         },
         {
           "name": "Blouse With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 210,
           "ironing": 75
         },
         {
           "name": "Blouse Designer",
-          "cleaning": "***",
+          "cleaning": 250,
           "ironing": 80
         },
         {
           "name": "Blouse Delicate",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 75
         },
         {
           "name": "Blouse Bridal",
-          "cleaning": "***",
+          "cleaning": 295,
           "ironing": 95
         }
       ]
@@ -246,17 +246,17 @@
       "items": [
         {
           "name": "Basic Shorts",
-          "cleaning": "***",
+          "cleaning": 80,
           "ironing": 50
         },
         {
           "name": "Silk Shorts",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 50
         },
         {
           "name": "Shorts With Print / Work",
-          "cleaning": "***",
+          "cleaning": 110,
           "ironing": 60
         }
       ]
@@ -266,37 +266,37 @@
       "items": [
         {
           "name": "Gown Basic",
-          "cleaning": "***",
+          "cleaning": 405,
           "ironing": 150
         },
         {
           "name": "Gown With Light Work",
-          "cleaning": "***",
+          "cleaning": 625,
           "ironing": 195
         },
         {
           "name": "Gown With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 850,
           "ironing": 265
         },
         {
           "name": "Gown Designer",
-          "cleaning": "***",
+          "cleaning": 925,
           "ironing": 395
         },
         {
           "name": "Gown Bridal",
-          "cleaning": "***",
+          "cleaning": 1500,
           "ironing": 575
         },
         {
           "name": "Gown Silk",
-          "cleaning": "***",
+          "cleaning": 632,
           "ironing": 395
         },
         {
           "name": "Gown Delicate",
-          "cleaning": "***",
+          "cleaning": 632,
           "ironing": 415
         }
       ]
@@ -306,127 +306,127 @@
       "items": [
         {
           "name": "Kids T-Shirt",
-          "cleaning": "***",
+          "cleaning": 85,
           "ironing": 40
         },
         {
           "name": "T-Shirt With Print / Work",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 40
         },
         {
           "name": "Kidswear Shirt",
-          "cleaning": "***",
+          "cleaning": 85,
           "ironing": 40
         },
         {
           "name": "Kidswear Shirt With Print / Work",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 40
         },
         {
           "name": "Kidswear Trouser",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 45
         },
         {
           "name": "Kidswear Trouser With Print / Work",
-          "cleaning": "***",
+          "cleaning": 110,
           "ironing": 45
         },
         {
           "name": "Kidswear Jeans",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 45
         },
         {
           "name": "Kidswear Jeans With Print / Work",
-          "cleaning": "***",
+          "cleaning": 110,
           "ironing": 45
         },
         {
           "name": "Kidswear Shorts",
-          "cleaning": "***",
+          "cleaning": 70,
           "ironing": 40
         },
         {
           "name": "Kidswear Shorts With Print / Work",
-          "cleaning": "***",
+          "cleaning": 85,
           "ironing": 40
         },
         {
           "name": "Kidswear Frock Basic",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 65
         },
         {
           "name": "Kidswear Frock With Print / Work",
-          "cleaning": "***",
+          "cleaning": 175,
           "ironing": 65
         },
         {
           "name": "Kidswear Skirt Basic",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 50
         },
         {
           "name": "Kidswear Skirt With Print / Work",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Kidswear Jacket / Blazer",
-          "cleaning": "***",
+          "cleaning": 245,
           "ironing": 80
         },
         {
           "name": "Kidswear Waistcoat",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 75
         },
         {
           "name": "Kids Kurta",
-          "cleaning": "***",
+          "cleaning": 135,
           "ironing": 60
         },
         {
           "name": "Kids Kurta With Light Work",
-          "cleaning": "***",
+          "cleaning": 170,
           "ironing": 60
         },
         {
           "name": "Kids Kurta With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 205,
           "ironing": 75
         },
         {
           "name": "Kids Pyjama / Shalwar Basic",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 45
         },
         {
           "name": "Kids Pyjama / Shalwar Silk",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 55
         },
         {
           "name": "Kids Shervani",
-          "cleaning": "***",
+          "cleaning": 250,
           "ironing": 95
         },
         {
           "name": "Kids Fancy Dress",
-          "cleaning": "***",
+          "cleaning": 345,
           "ironing": 110
         },
         {
           "name": "Kids Under Linen",
-          "cleaning": "***",
+          "cleaning": 75,
           "ironing": null
         },
         {
           "name": "Kids Vest",
-          "cleaning": "***",
+          "cleaning": 75,
           "ironing": null
         }
       ]
@@ -436,27 +436,27 @@
       "items": [
         {
           "name": "Nightie Basic",
-          "cleaning": "***",
+          "cleaning": 130,
           "ironing": 55
         },
         {
           "name": "Nightie With Work",
-          "cleaning": "***",
+          "cleaning": 175,
           "ironing": 55
         },
         {
           "name": "Nightie Satin",
-          "cleaning": "***",
+          "cleaning": 195,
           "ironing": 70
         },
         {
           "name": "Nightie Silk",
-          "cleaning": "***",
+          "cleaning": 215,
           "ironing": 70
         },
         {
           "name": "Custom",
-          "cleaning": "***",
+          "cleaning": null,
           "ironing": null
         }
       ]
@@ -466,32 +466,32 @@
       "items": [
         {
           "name": "Soft Toy (XS)",
-          "cleaning": "***",
+          "cleaning": 100,
           "ironing": null
         },
         {
           "name": "Soft Toy (S)",
-          "cleaning": "***",
+          "cleaning": 265,
           "ironing": null
         },
         {
           "name": "Soft Toy (M)",
-          "cleaning": "***",
+          "cleaning": 435,
           "ironing": null
         },
         {
           "name": "Soft Toy (L)",
-          "cleaning": "***",
+          "cleaning": 800,
           "ironing": null
         },
         {
           "name": "Soft Toy (XL)",
-          "cleaning": "***",
+          "cleaning": 1100,
           "ironing": null
         },
         {
           "name": "Soft Toy (2XL)",
-          "cleaning": "***",
+          "cleaning": 1345,
           "ironing": null
         }
       ]
@@ -501,52 +501,52 @@
       "items": [
         {
           "name": "T-Shirt Basic",
-          "cleaning": "***",
+          "cleaning": 99,
           "ironing": 50
         },
         {
           "name": "T-Shirt With Print",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "T-Shirt With Light Work",
-          "cleaning": "***",
+          "cleaning": 120,
           "ironing": 50
         },
         {
           "name": "T-Shirt With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 130,
           "ironing": 50
         },
         {
           "name": "Shirt Basic",
-          "cleaning": "***",
+          "cleaning": 99,
           "ironing": 50
         },
         {
           "name": "Shirt Silk",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "Shirt With Light Work",
-          "cleaning": "***",
+          "cleaning": 120,
           "ironing": 50
         },
         {
           "name": "Shirt With Heavy work",
-          "cleaning": "***",
+          "cleaning": 130,
           "ironing": 50
         },
         {
           "name": "Shirt With Print",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "Denim Shirt",
-          "cleaning": "***",
+          "cleaning": 130,
           "ironing": 50
         }
       ]
@@ -556,22 +556,22 @@
       "items": [
         {
           "name": "Waist Coat - Basic",
-          "cleaning": "***",
+          "cleaning": 200,
           "ironing": 90
         },
         {
           "name": "Waist Coat -Silk",
-          "cleaning": "***",
+          "cleaning": 254,
           "ironing": 90
         },
         {
           "name": "Waist Coat - With Work",
-          "cleaning": "***",
+          "cleaning": 297,
           "ironing": 140
         },
         {
           "name": "Waist Coat - Long",
-          "cleaning": "***",
+          "cleaning": 297,
           "ironing": 140
         }
       ]
@@ -581,52 +581,52 @@
       "items": [
         {
           "name": "Blazer / Jacket",
-          "cleaning": "***",
+          "cleaning": 399,
           "ironing": 125
         },
         {
           "name": "Casual Jacket",
-          "cleaning": "***",
+          "cleaning": 390,
           "ironing": 125
         },
         {
           "name": "Winter Jacket",
-          "cleaning": "***",
+          "cleaning": 405,
           "ironing": 150
         },
         {
           "name": "Jogging Jacket",
-          "cleaning": "***",
+          "cleaning": 340,
           "ironing": 125
         },
         {
           "name": "Cardigan Jacket",
-          "cleaning": "***",
+          "cleaning": 380,
           "ironing": 125
         },
         {
           "name": "Denim Jacket",
-          "cleaning": "***",
+          "cleaning": 265,
           "ironing": 125
         },
         {
           "name": "Over Coat",
-          "cleaning": "***",
+          "cleaning": 550,
           "ironing": 250
         },
         {
           "name": "Long Coat",
-          "cleaning": "***",
+          "cleaning": 675,
           "ironing": 300
         },
         {
           "name": "Blazer With Light Work",
-          "cleaning": "***",
+          "cleaning": 450,
           "ironing": 125
         },
         {
           "name": "Velvet Blazer",
-          "cleaning": "***",
+          "cleaning": 550,
           "ironing": 175
         }
       ]
@@ -636,27 +636,27 @@
       "items": [
         {
           "name": "Basic Shervani",
-          "cleaning": "***",
+          "cleaning": 590,
           "ironing": 165
         },
         {
           "name": "Shervani With Light Work",
-          "cleaning": "***",
+          "cleaning": 640,
           "ironing": 165
         },
         {
           "name": "Shervani With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 690,
           "ironing": 165
         },
         {
           "name": "Shervani Designer",
-          "cleaning": "***",
+          "cleaning": 750,
           "ironing": 225
         },
         {
           "name": "Shervani Bridal",
-          "cleaning": "***",
+          "cleaning": 850,
           "ironing": 275
         }
       ]
@@ -666,67 +666,67 @@
       "items": [
         {
           "name": "Sweater Basic",
-          "cleaning": "***",
+          "cleaning": 195,
           "ironing": 65
         },
         {
           "name": "Sweater Heavy",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 65
         },
         {
           "name": "Sweat Shirt Basic",
-          "cleaning": "***",
+          "cleaning": 195,
           "ironing": 65
         },
         {
           "name": "Sweat Shirt Heavy",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 65
         },
         {
           "name": "Muffler Basic",
-          "cleaning": "***",
+          "cleaning": 275,
           "ironing": 85
         },
         {
           "name": "Shawl Basic",
-          "cleaning": "***",
+          "cleaning": 190,
           "ironing": 95
         },
         {
           "name": "Shawl Heavy",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 95
         },
         {
           "name": "Woolen Cap",
-          "cleaning": "***",
+          "cleaning": 85,
           "ironing": 50
         },
         {
           "name": "Woolen Gloves",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 50
         },
         {
           "name": "Woolen Socks",
-          "cleaning": "***",
+          "cleaning": 95,
           "ironing": 50
         },
         {
           "name": "Thermalwear Top",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 60
         },
         {
           "name": "Thermalwear Bottom",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 60
         },
         {
           "name": "Sweat Shirt With Print",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 65
         }
       ]
@@ -736,27 +736,27 @@
       "items": [
         {
           "name": "Kaftan Basic",
-          "cleaning": "***",
+          "cleaning": 189,
           "ironing": 90
         },
         {
           "name": "Kaftan Silk",
-          "cleaning": "***",
+          "cleaning": 240,
           "ironing": 145
         },
         {
           "name": "Kaftan Light Work",
-          "cleaning": "***",
+          "cleaning": 297,
           "ironing": 190
         },
         {
           "name": "Kaftan With Heavy work",
-          "cleaning": "***",
+          "cleaning": 378,
           "ironing": 220
         },
         {
           "name": "Kaftan Delicate",
-          "cleaning": "***",
+          "cleaning": 240,
           "ironing": 145
         }
       ]
@@ -766,47 +766,47 @@
       "items": [
         {
           "name": "Top Basic",
-          "cleaning": "***",
+          "cleaning": 99,
           "ironing": 50
         },
         {
           "name": "Top Basic With Light Work",
-          "cleaning": "***",
+          "cleaning": 105,
           "ironing": 50
         },
         {
           "name": "Top Basic With Medium Work",
-          "cleaning": "***",
+          "cleaning": 125,
           "ironing": 60
         },
         {
           "name": "Top Basic With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 135,
           "ironing": 60
         },
         {
           "name": "Top Silk",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 50
         },
         {
           "name": "Top Silk With Light Work",
-          "cleaning": "***",
+          "cleaning": 125,
           "ironing": 50
         },
         {
           "name": "Top Silk With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 145,
           "ironing": 60
         },
         {
           "name": "Top Designer",
-          "cleaning": "***",
+          "cleaning": 300,
           "ironing": 60
         },
         {
           "name": "Ladies Top Delicate",
-          "cleaning": "***",
+          "cleaning": 200,
           "ironing": 50
         }
       ]
@@ -816,57 +816,57 @@
       "items": [
         {
           "name": "Dress Short Basic",
-          "cleaning": "***",
+          "cleaning": 169,
           "ironing": 75
         },
         {
           "name": "Dress Short Silk",
-          "cleaning": "***",
+          "cleaning": 180,
           "ironing": 75
         },
         {
           "name": "Dress Short With Light Work",
-          "cleaning": "***",
+          "cleaning": 200,
           "ironing": 75
         },
         {
           "name": "Dress Short With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 319,
           "ironing": 85
         },
         {
           "name": "Dress Long Basic",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 120
         },
         {
           "name": "Dress Long Silk",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 120
         },
         {
           "name": "Dress Long with Light Work",
-          "cleaning": "***",
+          "cleaning": 275,
           "ironing": 120
         },
         {
           "name": "Dress Long With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 390,
           "ironing": 150
         },
         {
           "name": "Dress Long Designer",
-          "cleaning": "***",
+          "cleaning": 972,
           "ironing": 250
         },
         {
           "name": "Dress Long Bridal",
-          "cleaning": "***",
+          "cleaning": 1917,
           "ironing": 500
         },
         {
           "name": "Dress Long Delicate",
-          "cleaning": "***",
+          "cleaning": 351,
           "ironing": 150
         }
       ]
@@ -876,47 +876,47 @@
       "items": [
         {
           "name": "Kurta Short Basic",
-          "cleaning": "***",
+          "cleaning": 145,
           "ironing": 65
         },
         {
           "name": "Kurta Short Silk",
-          "cleaning": "***",
+          "cleaning": 175,
           "ironing": 65
         },
         {
           "name": "Kurta Short With Print / Light Work",
-          "cleaning": "***",
+          "cleaning": 195,
           "ironing": 65
         },
         {
           "name": "Kurta Short With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 215,
           "ironing": 75
         },
         {
           "name": "Kurta Long Basic",
-          "cleaning": "***",
+          "cleaning": 165,
           "ironing": 70
         },
         {
           "name": "Kurta Long Silk",
-          "cleaning": "***",
+          "cleaning": 185,
           "ironing": 70
         },
         {
           "name": "Kurta Long With Print / Light Work",
-          "cleaning": "***",
+          "cleaning": 200,
           "ironing": 70
         },
         {
           "name": "Kurta Long With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 75
         },
         {
           "name": "Kurta Long Delicate",
-          "cleaning": "***",
+          "cleaning": 265,
           "ironing": 75
         }
       ]
@@ -926,82 +926,82 @@
       "items": [
         {
           "name": "Shalwar / Pyjama Basic",
-          "cleaning": "***",
+          "cleaning": 100,
           "ironing": 60
         },
         {
           "name": "Shalwar / Pyjama Silk",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": 60
         },
         {
           "name": "Shalwar / Pyjama With Light Work",
-          "cleaning": "***",
+          "cleaning": 135,
           "ironing": 60
         },
         {
           "name": "Shalwar / Pyjama With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 170,
           "ironing": 65
         },
         {
           "name": "Palazzo Basic",
-          "cleaning": "***",
+          "cleaning": 170,
           "ironing": 85
         },
         {
           "name": "Palazzo Silk",
-          "cleaning": "***",
+          "cleaning": 210,
           "ironing": 85
         },
         {
           "name": "Palazzo With Light Work",
-          "cleaning": "***",
+          "cleaning": 245,
           "ironing": 95
         },
         {
           "name": "Palazzo With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 275,
           "ironing": 95
         },
         {
           "name": "Sharara Basic",
-          "cleaning": "***",
+          "cleaning": 245,
           "ironing": 125
         },
         {
           "name": "Sharara Silk",
-          "cleaning": "***",
+          "cleaning": 285,
           "ironing": 125
         },
         {
           "name": "Sharara With Light Work",
-          "cleaning": "***",
+          "cleaning": 350,
           "ironing": 145
         },
         {
           "name": "Sharara With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 650,
           "ironing": 175
         },
         {
           "name": "Leggings",
-          "cleaning": "***",
+          "cleaning": 100,
           "ironing": 60
         },
         {
           "name": "Dhoti / Lungi Basic",
-          "cleaning": "***",
+          "cleaning": 165,
           "ironing": 90
         },
         {
           "name": "Dhoti / Lungi Silk",
-          "cleaning": "***",
+          "cleaning": 190,
           "ironing": 90
         },
         {
           "name": "Dhoti / Lungi With Work",
-          "cleaning": "***",
+          "cleaning": 250,
           "ironing": 110
         }
       ]
@@ -1011,32 +1011,32 @@
       "items": [
         {
           "name": "Dupatta Basic",
-          "cleaning": "***",
+          "cleaning": 85,
           "ironing": 45
         },
         {
           "name": "Dupatta Silk",
-          "cleaning": "***",
+          "cleaning": 120,
           "ironing": 45
         },
         {
           "name": "Dupatta With Light Work",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 60
         },
         {
           "name": "Dupatta With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 199,
           "ironing": 75
         },
         {
           "name": "Dupatta Designer",
-          "cleaning": "***",
+          "cleaning": 220,
           "ironing": 80
         },
         {
           "name": "Dupatta Bridal",
-          "cleaning": "***",
+          "cleaning": 245,
           "ironing": 80
         }
       ]
@@ -1046,32 +1046,32 @@
       "items": [
         {
           "name": "Anarkali Basic",
-          "cleaning": "***",
+          "cleaning": 490,
           "ironing": 170
         },
         {
           "name": "Anarkali Silk",
-          "cleaning": "***",
+          "cleaning": 490,
           "ironing": 170
         },
         {
           "name": "Anarkali With Light Work",
-          "cleaning": "***",
+          "cleaning": 550,
           "ironing": 170
         },
         {
           "name": "Anarkali With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 650,
           "ironing": 200
         },
         {
           "name": "Anarkali Designer",
-          "cleaning": "***",
+          "cleaning": 1026,
           "ironing": 300
         },
         {
           "name": "Custom",
-          "cleaning": "***",
+          "cleaning": null,
           "ironing": null
         }
       ]
@@ -1081,32 +1081,32 @@
       "items": [
         {
           "name": "Lehenga Basic",
-          "cleaning": "***",
+          "cleaning": 475,
           "ironing": 90
         },
         {
           "name": "Lehenga Silk",
-          "cleaning": "***",
+          "cleaning": 695,
           "ironing": 155
         },
         {
           "name": "Lehenga With Light / Work",
-          "cleaning": "***",
+          "cleaning": 920,
           "ironing": 210
         },
         {
           "name": "Lehenga With Heavy / Work",
-          "cleaning": "***",
+          "cleaning": 1090,
           "ironing": 320
         },
         {
           "name": "Lehenga Designer",
-          "cleaning": "***",
+          "cleaning": 1190,
           "ironing": 320
         },
         {
           "name": "Lehenga Bridal",
-          "cleaning": "***",
+          "cleaning": 1290,
           "ironing": 320
         }
       ]
@@ -1116,42 +1116,42 @@
       "items": [
         {
           "name": "Skirt Short Basic",
-          "cleaning": "***",
+          "cleaning": 99,
           "ironing": 60
         },
         {
           "name": "Skirt Short Silk",
-          "cleaning": "***",
+          "cleaning": 110,
           "ironing": 60
         },
         {
           "name": "Skirt Short With Light Work",
-          "cleaning": "***",
+          "cleaning": 135,
           "ironing": 70
         },
         {
           "name": "Skirt Short With Heavy Work",
-          "cleaning": "***",
+          "cleaning": 175,
           "ironing": 90
         },
         {
           "name": "Skirt Long Basic",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 85
         },
         {
           "name": "Skirt Long Silk",
-          "cleaning": "***",
+          "cleaning": 175,
           "ironing": 100
         },
         {
           "name": "Skirt Long With Light Work",
-          "cleaning": "***",
+          "cleaning": 225,
           "ironing": 120
         },
         {
           "name": "Skirt Long With Heavy work",
-          "cleaning": "***",
+          "cleaning": 290,
           "ironing": 150
         }
       ]
@@ -1161,32 +1161,32 @@
       "items": [
         {
           "name": "Chaniya",
-          "cleaning": "***",
+          "cleaning": 470,
           "ironing": 215
         },
         {
           "name": "Choli",
-          "cleaning": "***",
+          "cleaning": 210,
           "ironing": 120
         },
         {
           "name": "Chaniya Designer",
-          "cleaning": "***",
+          "cleaning": 550,
           "ironing": 250
         },
         {
           "name": "Choli Designer",
-          "cleaning": "***",
+          "cleaning": 270,
           "ironing": 190
         },
         {
           "name": "Chaniya Bridal",
-          "cleaning": "***",
+          "cleaning": 699,
           "ironing": 370
         },
         {
           "name": "Choli Bridal",
-          "cleaning": "***",
+          "cleaning": 320,
           "ironing": 260
         }
       ]
@@ -1196,17 +1196,17 @@
       "items": [
         {
           "name": "Fabric Sofa (Cleaning Per Seat)",
-          "cleaning": "***",
+          "cleaning": 350,
           "ironing": null
         },
         {
           "name": "Leather Sofa (Cleaning Per Seat)",
-          "cleaning": "***",
+          "cleaning": 450,
           "ironing": null
         },
         {
           "name": "Table Mat",
-          "cleaning": "***",
+          "cleaning": 65,
           "ironing": null
         }
       ]
@@ -1216,22 +1216,22 @@
       "items": [
         {
           "name": "Pillow (S)",
-          "cleaning": "***",
+          "cleaning": 170,
           "ironing": null
         },
         {
           "name": "Pillow (M)",
-          "cleaning": "***",
+          "cleaning": 115,
           "ironing": null
         },
         {
           "name": "Pillow (L)",
-          "cleaning": "***",
+          "cleaning": 140,
           "ironing": null
         },
         {
           "name": "Pillow (XL)",
-          "cleaning": "***",
+          "cleaning": 190,
           "ironing": null
         }
       ]
@@ -1241,37 +1241,37 @@
       "items": [
         {
           "name": "1 BHK",
-          "cleaning": "***",
+          "cleaning": 6500,
           "ironing": null
         },
         {
           "name": "2 BF-IK",
-          "cleaning": "***",
+          "cleaning": 7500,
           "ironing": null
         },
         {
           "name": "3 BHK",
-          "cleaning": "***",
+          "cleaning": 8500,
           "ironing": null
         },
         {
           "name": "4 BHK",
-          "cleaning": "***",
+          "cleaning": 9500,
           "ironing": null
         },
         {
           "name": "Row House - 2 bedroom",
-          "cleaning": "***",
+          "cleaning": 12000,
           "ironing": null
         },
         {
           "name": "Row House - 3 Bedroom",
-          "cleaning": "***",
+          "cleaning": 16000,
           "ironing": null
         },
         {
           "name": "Row House - 4 Bedroom",
-          "cleaning": "***",
+          "cleaning": 22000,
           "ironing": null
         }
       ]
@@ -1281,42 +1281,42 @@
       "items": [
         {
           "name": "Cushion Cover (S)",
-          "cleaning": "***",
+          "cleaning": 65,
           "ironing": 30
         },
         {
           "name": "Cushion Cover (M)",
-          "cleaning": "***",
+          "cleaning": 80,
           "ironing": 40
         },
         {
           "name": "Cushion Cover (L)",
-          "cleaning": "***",
+          "cleaning": 99,
           "ironing": 50
         },
         {
           "name": "Cushion Cover (XL)",
-          "cleaning": "***",
+          "cleaning": 125,
           "ironing": 60
         },
         {
           "name": "Cushion Cover Quilted (S)",
-          "cleaning": "***",
+          "cleaning": 99,
           "ironing": 40
         },
         {
           "name": "Cushion Cover Quilted (M)",
-          "cleaning": "***",
+          "cleaning": 120,
           "ironing": 50
         },
         {
           "name": "Cushion Cover Quilted (L)",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 60
         },
         {
           "name": "Cushion Cover Quilted (XL)",
-          "cleaning": "***",
+          "cleaning": 190,
           "ironing": 70
         }
       ]
@@ -1326,32 +1326,32 @@
       "items": [
         {
           "name": "Bedsheet (SGL)",
-          "cleaning": "***",
+          "cleaning": 150,
           "ironing": 55
         },
         {
           "name": "Bedsheet (DBL",
-          "cleaning": "***",
+          "cleaning": 210,
           "ironing": 75
         },
         {
           "name": "Bedsheet (XL)",
-          "cleaning": "***",
+          "cleaning": 290,
           "ironing": 100
         },
         {
           "name": "Bedsheet Quilted (SGL)",
-          "cleaning": "***",
+          "cleaning": 180,
           "ironing": 65
         },
         {
           "name": "Bedsheet Quilted (DBL)",
-          "cleaning": "***",
+          "cleaning": 250,
           "ironing": 85
         },
         {
           "name": "Bedsheet Quilted (XL)",
-          "cleaning": "***",
+          "cleaning": 330,
           "ironing": 110
         }
       ]
@@ -1361,22 +1361,22 @@
       "items": [
         {
           "name": "Quilt (SGL)",
-          "cleaning": "***",
+          "cleaning": 430,
           "ironing": null
         },
         {
           "name": "Quilt (DBL)",
-          "cleaning": "***",
+          "cleaning": 650,
           "ironing": null
         },
         {
           "name": "Quilt (XL)",
-          "cleaning": "***",
+          "cleaning": 805,
           "ironing": null
         },
         {
           "name": "Quilt (2XL)",
-          "cleaning": "***",
+          "cleaning": 1010,
           "ironing": null
         }
       ]
@@ -1386,22 +1386,22 @@
       "items": [
         {
           "name": "Bath Towel (S)",
-          "cleaning": "***",
+          "cleaning": 85,
           "ironing": null
         },
         {
           "name": "Bath Towel (M)",
-          "cleaning": "***",
+          "cleaning": 120,
           "ironing": null
         },
         {
           "name": "Bath Towel (L)",
-          "cleaning": "***",
+          "cleaning": 145,
           "ironing": null
         },
         {
           "name": "Bath Towel (XL)",
-          "cleaning": "***",
+          "cleaning": 165,
           "ironing": null
         }
       ]
@@ -1411,22 +1411,22 @@
       "items": [
         {
           "name": "Blanket (SGL)",
-          "cleaning": "***",
+          "cleaning": 430,
           "ironing": null
         },
         {
           "name": "Blanket (DBL)",
-          "cleaning": "***",
+          "cleaning": 650,
           "ironing": null
         },
         {
           "name": "Blanket (XL)",
-          "cleaning": "***",
+          "cleaning": 805,
           "ironing": null
         },
         {
           "name": "Blanket (2XL)",
-          "cleaning": "***",
+          "cleaning": 1010,
           "ironing": null
         }
       ]
@@ -1436,17 +1436,17 @@
       "items": [
         {
           "name": "Fabric Blinds - Light",
-          "cleaning": "***",
+          "cleaning": 7,
           "ironing": 3
         },
         {
           "name": "Fabric Blinds - Medium",
-          "cleaning": "***",
+          "cleaning": 10,
           "ironing": 4
         },
         {
           "name": "Fabric Blinds - Heavy",
-          "cleaning": "***",
+          "cleaning": 89,
           "ironing": 7
         }
       ]
@@ -1456,22 +1456,22 @@
       "items": [
         {
           "name": "Door Mat (S)",
-          "cleaning": "***",
+          "cleaning": 135,
           "ironing": null
         },
         {
           "name": "Door Mat (M)",
-          "cleaning": "***",
+          "cleaning": 189,
           "ironing": null
         },
         {
           "name": "Door Mat (L)",
-          "cleaning": "***",
+          "cleaning": 243,
           "ironing": null
         },
         {
           "name": "Door Mat (XL)",
-          "cleaning": "***",
+          "cleaning": 297,
           "ironing": null
         }
       ]
@@ -1481,22 +1481,22 @@
       "items": [
         {
           "name": "Rug (S)",
-          "cleaning": "***",
+          "cleaning": 235,
           "ironing": null
         },
         {
           "name": "Rug (M)",
-          "cleaning": "***",
+          "cleaning": 350,
           "ironing": null
         },
         {
           "name": "Rug (L)",
-          "cleaning": "***",
+          "cleaning": 485,
           "ironing": null
         },
         {
           "name": "Rug (XL)",
-          "cleaning": "***",
+          "cleaning": 670,
           "ironing": null
         }
       ]
@@ -1506,22 +1506,22 @@
       "items": [
         {
           "name": "Yoga Mat (S)",
-          "cleaning": "***",
+          "cleaning": 245,
           "ironing": null
         },
         {
           "name": "Yoga Mat (M)",
-          "cleaning": "***",
+          "cleaning": 405,
           "ironing": null
         },
         {
           "name": "Yoga Mat (L)",
-          "cleaning": "***",
+          "cleaning": 485,
           "ironing": null
         },
         {
           "name": "Yoga Mat (XL)",
-          "cleaning": "***",
+          "cleaning": 635,
           "ironing": null
         }
       ]
@@ -1531,17 +1531,17 @@
       "items": [
         {
           "name": "Sofa Cover (SGL)",
-          "cleaning": "***",
+          "cleaning": 190,
           "ironing": 99
         },
         {
           "name": "Sofa Cover (DBL)",
-          "cleaning": "***",
+          "cleaning": 230,
           "ironing": 120
         },
         {
           "name": "Sofa Cover (TRP)",
-          "cleaning": "***",
+          "cleaning": 290,
           "ironing": 150
         }
       ]
@@ -1551,57 +1551,57 @@
       "items": [
         {
           "name": "Slipper / Sandal",
-          "cleaning": "***",
+          "cleaning": 320,
           "ironing": null
         },
         {
           "name": "Fabric Shoes",
-          "cleaning": "***",
+          "cleaning": 440,
           "ironing": null
         },
         {
           "name": "Sports Shoes",
-          "cleaning": "***",
+          "cleaning": 495,
           "ironing": null
         },
         {
           "name": "Sports Bag",
-          "cleaning": "***",
+          "cleaning": 890,
           "ironing": null
         },
         {
           "name": "Fabric With Leather Trim Shoes",
-          "cleaning": "***",
+          "cleaning": 575,
           "ironing": null
         },
         {
           "name": "Fabric With Leather Trim Bag",
-          "cleaning": "***",
+          "cleaning": 1135,
           "ironing": null
         },
         {
           "name": "Suede Shoes",
-          "cleaning": "***",
+          "cleaning": 825,
           "ironing": null
         },
         {
           "name": "Suede Bag",
-          "cleaning": "***",
+          "cleaning": 1210,
           "ironing": null
         },
         {
           "name": "Leather Shoes",
-          "cleaning": "***",
+          "cleaning": 715,
           "ironing": null
         },
         {
           "name": "Rexine Shoes",
-          "cleaning": "***",
+          "cleaning": 650,
           "ironing": null
         },
         {
           "name": "Boots",
-          "cleaning": "***",
+          "cleaning": 975,
           "ironing": null
         }
       ]
@@ -1611,17 +1611,17 @@
       "items": [
         {
           "name": "Fabric Bag (S)",
-          "cleaning": "***",
+          "cleaning": 330,
           "ironing": null
         },
         {
           "name": "Fabric Bag (M)",
-          "cleaning": "***",
+          "cleaning": 390,
           "ironing": null
         },
         {
           "name": "Fabric Bag (L)",
-          "cleaning": "***",
+          "cleaning": 490,
           "ironing": null
         }
       ]
@@ -1631,27 +1631,27 @@
       "items": [
         {
           "name": "Leather Clutch",
-          "cleaning": "***",
+          "cleaning": 600,
           "ironing": null
         },
         {
           "name": "Leather Bag (S)",
-          "cleaning": "***",
+          "cleaning": 800,
           "ironing": null
         },
         {
           "name": "Leather Bag (M)",
-          "cleaning": "***",
+          "cleaning": 1000,
           "ironing": null
         },
         {
           "name": "Leather Bag (L)",
-          "cleaning": "***",
+          "cleaning": 1200,
           "ironing": null
         },
         {
           "name": "Laptop Bag",
-          "cleaning": "***",
+          "cleaning": 495,
           "ironing": null
         }
       ]
@@ -1661,17 +1661,17 @@
       "items": [
         {
           "name": "Trolley Bag (S)",
-          "cleaning": "***",
+          "cleaning": 875,
           "ironing": null
         },
         {
           "name": "Trolley Bag (M)",
-          "cleaning": "***",
+          "cleaning": 1100,
           "ironing": null
         },
         {
           "name": "Suit Cade",
-          "cleaning": "***",
+          "cleaning": 1375,
           "ironing": null
         }
       ]
@@ -1681,22 +1681,22 @@
       "items": [
         {
           "name": "Express Shine",
-          "cleaning": "***",
+          "cleaning": 450,
           "ironing": null
         },
         {
           "name": "High Shine",
-          "cleaning": "***",
+          "cleaning": 575,
           "ironing": null
         },
         {
           "name": "Regular Shine",
-          "cleaning": "***",
+          "cleaning": 620,
           "ironing": null
         },
         {
           "name": "Shoe Smith Shine",
-          "cleaning": "***",
+          "cleaning": 735,
           "ironing": null
         }
       ]

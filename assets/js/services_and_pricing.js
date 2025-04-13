@@ -7,6 +7,7 @@ async function fetch_json_data(requested_location) {
         const data = await response.json();
         return { data, location_used: requested_location };
     } catch (error) {
+        // If the request was not for the default json, try fetching the default
         if (requested_location === 'default') {
             throw error;
         }
@@ -17,7 +18,7 @@ async function fetch_json_data(requested_location) {
 
 function update_service_list(categories) {
     const service_lists_container = document.querySelector('.service-list-left');
-    service_lists_container.innerHTML = ''; // Clear existing content
+    service_lists_container.innerHTML = ''; // Clear existing services
 
     categories.forEach(category => {
         const category_element = document.createElement('div');
@@ -41,7 +42,10 @@ function update_service_list(categories) {
 
             const item_price = document.createElement('span');
             item_price.classList.add('item-price');
-            item_price.textContent = `₹${item.cleaning}`;
+            item_price.textContent = (item.cleaning === null)
+                ? '-'
+                : (item.cleaning !== "***" ? `₹${item.cleaning}` : item.cleaning);
+
             item_element.appendChild(item_price);
 
             items_list.appendChild(item_element);
@@ -66,30 +70,32 @@ function update_title(serviceKey) {
     };
 
     const section_title = document.querySelector('.service-section-hero-title');
-    const displayTitle = service_mappings[serviceKey]
-        || service_mappings["washing"];
+    const displayTitle = service_mappings[serviceKey] || service_mappings["washing"];
 
     section_title.textContent = displayTitle;
 }
-(async () => {
-    const search_params = new URLSearchParams(window.location.search);
-    const requested_location = search_params.get('location') || 'default';
-    const service_type = search_params.get('service');
 
+async function loadData(requested_location) {
     try {
-        const { data, location_used } = await fetch_json_data(requested_location);
-
-        if (requested_location !== location_used) {
-            const new_search_params = new URLSearchParams(search_params);
-            new_search_params.set('location', location_used);
-            history.replaceState({}, '', `${window.location.pathname}?${new_search_params.toString()}`);
-        }
-        if (data && data.title && data.categories) {
-            document.querySelector('.service-section-hero-title').textContent = data.title;
+        const { data } = await fetch_json_data(requested_location);
+        if (data.categories) {
             update_service_list(data.categories);
-            update_title(service_type);
         }
     } catch (error) {
         console.error('Failed to load data:', error);
     }
-})();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const service_type = urlParams.get('service') || 'washing';
+
+    loadData('default');
+    update_title(service_type);
+
+    const locationSelect = document.getElementById('location');
+    locationSelect.addEventListener('change', () => {
+        const selectedLocation = locationSelect.value;
+        loadData(selectedLocation);
+    });
+});
