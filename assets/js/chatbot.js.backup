@@ -1,0 +1,406 @@
+// Store pricing data for different locations
+let pricingData = null;
+let currentLocation = 'default';
+
+// Training data for intent recognition
+const trainingData = {
+    greetings: [
+        'hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening',
+        'howdy', 'whats up', 'hola', 'namaste'
+    ],
+        async function handleUserOption(option) {
+            switch (option) {
+                case "Shop Timings":
+                    addMessage("Our shop is open from 9:00 AM to 9:00 PM, seven days a week!", 'bot');
+                    addOptions([
+                        "Book a Pickup",
+                        "Find Nearest Location",
+                        "View Services",
+                        "Main Menu"
+                    ]);
+                    break;
+
+                case "Check Prices":
+                    addMessage("What would you like to know the price for?", 'bot');
+                    addOptions([
+                        "Regular Clothes (Shirts, Pants, etc.)",
+                        "Premium Garments (Suits, Dresses)",
+                        "Household Items",
+                        "Main Menu"
+                    ]);
+                    break;
+
+                case "Shop Address":
+                    addMessage("We have multiple locations in Mumbai. Which area interests you?", 'bot');
+                    addOptions([
+                        "Bandra",
+                        "JVPD",
+                        "Khar",
+                        "Other Locations",
+                        "Main Menu"
+                    ]);
+                    break;
+
+                case "Contact Information":
+                    addMessage("You can reach us at:\nPhone: +91 98765 43210\nEmail: info@wewash.com", 'bot');
+                    addOptions([
+                        "Book a Pickup",
+                        "Send Email",
+                        "View Working Hours",
+                        "Main Menu"
+                    ]);
+                    break;
+
+                // Handle sub-options for prices
+                case "Regular Clothes (Shirts, Pants, etc.)":
+                    handleClothingPrices("regular");
+                    break;
+                case "Premium Garments (Suits, Dresses)":
+                    handleClothingPrices("premium");
+                    break;
+                case "Household Items":
+                    handleClothingPrices("household");
+                    break;
+
+                // Handle location specific options
+                case "Bandra":
+                case "JVPD":
+                case "Khar":
+                    handleLocationDetails(option.toLowerCase());
+                    break;
+                case "Other Locations":
+                    addMessage("Our other locations include:\n- Santacruz\n- Versova\n- Mira-Bhayandar", 'bot');
+                    addOptions([
+                        "Santacruz",
+                        "Versova",
+                        "Mira-Bhayandar",
+                        "Main Menu"
+                    ]);
+                    break;
+
+                // Handle action options
+                case "Book a Pickup":
+                    addMessage("Would you like to schedule a pickup now?", 'bot');
+                    addOptions([
+                        "Schedule Now",
+                        "View Pricing First",
+                        "Check Service Area",
+                        "Main Menu"
+                    ]);
+                    break;
+
+                case "Schedule Now":
+                    window.location.href = 'schedule_pickup.html';
+                    break;
+
+                case "Main Menu":
+                    showMainOptions();
+                    break;
+
+                default:
+                    showMainOptions();
+            }
+        },
+
+        // Function to handle clothing prices based on category
+        function handleClothingPrices(category) {
+            let prices = "";
+            switch (category) {
+                case "regular":
+                    prices = "Regular Clothing Prices:\n" +
+                        "- Shirts: ₹60-80\n" +
+                        "- Pants: ₹70-90\n" +
+                        "- T-shirts: ₹50-70";
+                    break;
+                case "premium":
+                    prices = "Premium Garment Prices:\n" +
+                        "- Suits: ₹350-500\n" +
+                        "- Dresses: ₹300-450\n" +
+                        "- Coats: ₹400-600";
+                    break;
+                case "household":
+                    prices = "Household Item Prices:\n" +
+                        "- Bedsheets: ₹150-200\n" +
+                        "- Curtains: ₹200-300\n" +
+                        "- Blankets: ₹250-400";
+                    break;
+            }
+            addMessage(prices, 'bot');
+            addOptions([
+                "Check Other Prices",
+                "Book a Pickup",
+                "View Services",
+                "Main Menu"
+            ]);
+        },
+
+        // Function to handle location specific details
+        async function handleLocationDetails(location) {
+            try {
+                const response = await fetch(`./assets/json/${location}.json`);
+                const locationData = await response.json();
+                addMessage(`${location.toUpperCase()} Branch Details:\nAddress: ${locationData.address}\nContact: ${locationData.phone}`, 'bot');
+                addOptions([
+                    "Check Prices",
+                    "Book a Pickup",
+                    "Other Locations",
+                    "Main Menu"
+                ]);
+            } catch (error) {
+                addMessage("Sorry, I couldn't fetch the location details. Please try again.", 'bot');
+                showMainOptions();
+            }
+        }, 'hi', 'hey', 'good morning', 'good afternoon', 'good evening',
+        'howdy', 'whats up', 'hola', 'namaste'
+    ],
+    farewell: [
+        'bye', 'goodbye', 'see you', 'take care', 'catch you later', 'good night'
+    ],
+    priceQuery: [
+        'price', 'cost', 'charge', 'rate', 'fee', 'pricing', 'how much',
+        'what is the price', 'tell me the cost'
+    ],
+    serviceQuery: [
+        'service', 'wash', 'clean', 'iron', 'dry clean', 'process',
+        'how do you', 'what services', 'offer'
+    ],
+    locationQuery: [
+        'where', 'location', 'address', 'place', 'area', 'branch',
+        'available in', 'do you serve'
+    ]
+};
+
+// Common clothing items and their variations
+const itemVariations = {
+    'shirt': ['shirt', 'shirts', 'tshirt', 't-shirt', 'tee', 'top'],
+    'pants': ['pants', 'pant', 'trousers', 'jeans', 'slacks'],
+    'dress': ['dress', 'gown', 'frock'],
+    'suit': ['suit', 'blazer', 'coat'],
+    'saree': ['saree', 'sari'],
+    'jacket': ['jacket', 'windbreaker', 'coat'],
+    'sweater': ['sweater', 'jumper', 'pullover'],
+    'kurta': ['kurta', 'kurti']
+};
+
+// Fetch pricing data
+async function fetchPricingData(location) {
+    try {
+        const response = await fetch(`./assets/json/${location}.json`);
+        pricingData = await response.json();
+        currentLocation = location;
+    } catch (error) {
+        console.error('Error loading pricing data:', error);
+    }
+}
+
+// NLP helper functions
+function getIntent(input) {
+    const text = input.toLowerCase();
+
+    for (const [intent, patterns] of Object.entries(trainingData)) {
+        if (patterns.some(pattern => text.includes(pattern))) {
+            return intent;
+        }
+    }
+    return 'unknown';
+}
+
+function extractClothingItem(input) {
+    const text = input.toLowerCase();
+
+    // First check direct matches from pricing data
+    const directMatch = Object.values(pricingData.categories)
+        .flatMap(category => category.items)
+        .find(item => text.includes(item.name.toLowerCase()));
+
+    if (directMatch) return directMatch;
+
+    // Then check variations
+    for (const [standardItem, variations] of Object.entries(itemVariations)) {
+        if (variations.some(variant => text.includes(variant))) {
+            // Find the closest matching item in pricing data
+            return Object.values(pricingData.categories)
+                .flatMap(category => category.items)
+                .find(item =>
+                    item.name.toLowerCase().includes(standardItem) ||
+                    standardItem.includes(item.name.toLowerCase())
+                );
+        }
+    }
+    return null;
+}
+
+// Initialize with default pricing
+fetchPricingData('default');
+
+class Chatbot {
+    constructor() {
+        this.messages = [];
+    } async handleUserInput(userInput) {
+        const input = userInput.toLowerCase();
+
+        // Handle main menu request
+        if (input.includes('menu') || input.includes('start over')) {
+            showMainOptions();
+            return "Here are the main options. What would you like to know?";
+        }
+
+        // Handle custom text input based on context
+        if (input.includes('price') || input.includes('cost')) {
+            const item = extractClothingItem(input);
+            if (item) {
+                const response = `The price for ${item.name} is:\nCleaning: ${item.cleaning === "***" ? "Price varies" : "₹" + item.cleaning}\nIroning: ${item.ironing ? "₹" + item.ironing : "Not available"}`;
+                addMessage(response, 'bot');
+                addOptions([
+                    "Check Other Prices",
+                    "Book a Pickup",
+                    "View Services",
+                    "Main Menu"
+                ]);
+                return;
+            }
+        }
+
+        // If no specific handling, show main options
+        showMainOptions();
+        return "I'm here to help! Please select one of the options below:";
+
+            case 'serviceQuery':
+        return "We offer a range of services including:\n" +
+            "- Dry Cleaning\n" +
+            "- Wash & Iron\n" +
+            "- Express Service\n" +
+            "- Premium Garment Care\n" +
+            "Would you like to know the price for any specific service?";
+
+            case 'locationQuery':
+        return "We serve multiple locations in Mumbai including Bandra, JVPD, Khar, Santacruz, Versova, and Mira-Bhayandar. " +
+            "Would you like to know the pricing for your specific location?";
+    }
+
+    // Handle help command
+    if(input.includes('help')) {
+    return "I can help you with:\n" +
+        "1. Pricing for specific items (e.g., 'How much for a shirt?')\n" +
+        "2. Information about our services (e.g., 'What services do you offer?')\n" +
+        "3. Location information (e.g., 'Where are you located?')\n" +
+        "4. Just type any garment name to know its price!";
+}
+
+// Try to find any clothing item mentioned
+const mentionedItem = extractClothingItem(input);
+if (mentionedItem) {
+    return `The price for ${mentionedItem.name} is:\nCleaning: ${mentionedItem.cleaning === "***" ? "Price varies" : "₹" + mentionedItem.cleaning}\nIroning: ${mentionedItem.ironing ? "₹" + mentionedItem.ironing : "Not available"}`;
+}
+
+// Default response
+return "I'm not sure about that. You can ask me about:\n" +
+    "- Prices for specific items\n" +
+    "- Our services\n" +
+    "- Locations we serve\n" +
+    "Or type 'help' for more options!";
+    }
+}
+
+// Create chatbot UI
+function createChatbotUI() {
+    const chatbotContainer = document.createElement('div');
+    chatbotContainer.className = 'chatbot-container';
+    chatbotContainer.innerHTML = `
+        <div class="chatbot-header">
+            <h3>WeWash Assistant</h3>
+            <button class="chatbot-toggle">×</button>
+        </div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+    `;
+
+    document.body.appendChild(chatbotContainer);
+
+    const chatbot = new Chatbot();
+    const messagesDiv = chatbotContainer.querySelector('.chatbot-messages');
+    const input = chatbotContainer.querySelector('input');
+    const sendButton = chatbotContainer.querySelector('.chatbot-input button');
+    const toggleButton = chatbotContainer.querySelector('.chatbot-toggle');    // Function to create clickable options
+    function addOptions(options) {
+        const optionsDiv = document.createElement('div');
+        optionsDiv.className = 'chatbot-options';
+        options.forEach(option => {
+            const button = document.createElement('button');
+            button.className = 'chatbot-option-button';
+            button.textContent = option;
+            button.addEventListener('click', () => {
+                addMessage(option, 'user');
+                handleUserOption(option);
+            });
+            optionsDiv.appendChild(button);
+        });
+        messagesDiv.appendChild(optionsDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    // Function to handle option selection
+    async function handleUserOption(option) {
+        switch (option) {
+            case "Shop Timings":
+                addMessage("Our shop is open from 9:00 AM to 9:00 PM, seven days a week!", 'bot');
+                break;
+            case "Check Prices":
+                addMessage("What item would you like to know the price for? You can ask about any garment like shirts, pants, sarees, etc.", 'bot');
+                break;
+            case "Shop Address":
+                addMessage("We have multiple locations in Mumbai:\n- Bandra\n- JVPD\n- Khar\n- Santacruz\n- Versova\n- Mira-Bhayandar\n\nWhich location would you like to know more about?", 'bot');
+                break;
+            case "Contact Information":
+                addMessage("You can reach us at:\nPhone: +91 98765 43210\nEmail: info@wewash.com\n\nFeel free to call or email us for any queries!", 'bot');
+                break;
+        }
+        showMainOptions();
+    }
+
+    function showMainOptions() {
+        const options = [
+            "Shop Timings",
+            "Check Prices",
+            "Shop Address",
+            "Contact Information"
+        ];
+        addOptions(options);
+    }
+
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${sender}`;
+        messageDiv.textContent = text;
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    // Add welcome message and show options
+    addMessage("Hello! I'm WeWash's virtual assistant. How can I help you today?", 'bot');
+    showMainOptions();
+
+    async function handleInput() {
+        const userText = input.value.trim();
+        if (userText) {
+            addMessage(userText, 'user');
+            input.value = '';
+            const response = await chatbot.handleUserInput(userText);
+            addMessage(response, 'bot');
+        }
+    }
+
+    sendButton.addEventListener('click', handleInput);
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handleInput();
+        }
+    });
+
+    toggleButton.addEventListener('click', () => {
+        chatbotContainer.classList.toggle('chatbot-minimized');
+    });
+}
